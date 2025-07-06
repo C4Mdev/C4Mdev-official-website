@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "ratings": 5,
+        "title": "A game-changing reality",
+        "text": "Code4MatesDev turned our vision into a game-changing reality. Their expertise is unmatched.",
+        "name": "Client A",
+        "designation": "CEO"
+    },
+    {
+        "id": 2,
+        "ratings": 5,
+        "title": "A true partner in innovation",
+        "text": "A true partner in innovation—they delivered beyond what we thought possible.",
+        "name": "Client B",
+        "designation": "CTO"
+    },
+    {
+        "id": 3,
+        "ratings": 5,
+        "title": "Exceptional digital transformation",
+        "text": "Code4MatesDev transformed our entire digital infrastructure. Their team combines technical excellence with creative vision that exceeds expectations.",
+        "name": "Sarah Johnson",
+        "designation": "VP of Technology"
+    },
+    {
+        "id": 4,
+        "ratings": 5,
+        "title": "Outstanding partnership",
+        "text": "Working with Code4MatesDev has been transformational for our business. They understand our vision and bring innovative solutions to every challenge.",
+        "name": "Michael Chen",
+        "designation": "Founder & CEO"
+    }
+]

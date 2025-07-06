@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "thumb": "6.png",
+        "activeClass": "active",
+        "steps": "01",
+        "title": "Discovery & Research",
+        "text": "We kick off with in-depth consultations to understand your objectives, users, and market landscape."
+    },
+    {
+        "id": "2",
+        "thumb": "7.png",
+        "activeClass": "",
+        "steps": "02",
+        "title": "Planning & Strategy",
+        "text": "We define clear project goals, milestones, and technology choices to align with your business priorities."
+    },
+    {
+        "id": "3",
+        "thumb": "8.png",
+        "activeClass": "",
+        "steps": "03",
+        "title": "Design & Prototyping",
+        "text": "Our designers create wireframes and interactive prototypes to visualize functionality and gather feedback."
+    },
+    {
+        "id": "4",
+        "thumb": "9.png",
+        "activeClass": "",
+        "steps": "04",
+        "title": "Development & Testing",
+        "text": "Our engineers implement robust code using best practices, paired with continuous testing to ensure reliability."
+    },
+    {
+        "id": "5",
+        "thumb": "10.png",
+        "activeClass": "",
+        "steps": "05",
+        "title": "Deployment & Training",
+        "text": "We deploy solutions to your production environment and provide training materials to empower your team."
+    },
+    {
+        "id": "6",
+        "thumb": "11.png",
+        "activeClass": "",
+        "steps": "06",
+        "title": "Support & Evolution",
+        "text": "We offer ongoing maintenance, performance optimization, and roadmap planning for future enhancements."
+    }
+]

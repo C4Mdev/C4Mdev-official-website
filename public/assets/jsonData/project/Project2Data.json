@@ -1,0 +1,144 @@
+[
+    {
+        "id": 1,
+        "thumb": "5.jpg",
+        "thumbFull": "5-full.jpg",
+        "activeClass": "active",
+        "tag": "POS System, Next.js, Supabase, Tailwind, shadcn UI",
+        "title": "DRC Book Shop POS System",
+        "detailsTitle": "DRC Book Shop POS System",
+        "detailsIntro": "This project is a cutting-edge Point of Sale (POS) system built with Next.js for a fast, seamless user experience, Supabase for real-time backend and authentication, and shadcn UI for a beautiful, accessible interface. Designed for modern businesses, it enables efficient sales, inventory management, and reporting from any device.",
+        "detailsMain": "Our Next.js POS system leverages the power of Supabase for secure, scalable data management and real-time updates, while shadcn UI ensures a sleek, intuitive user experience. The platform supports multi-device access, robust analytics, and easy integration with third-party services, making it ideal for retail, restaurants, and service businesses seeking digital transformation.",
+        "projectData": [
+            {
+                "id": 1,
+                "title": "Next.js Frontend",
+                "info": "A fast, modern, and scalable POS interface built with Next.js for seamless user experience."
+            },
+            {
+                "id": 2,
+                "title": "Supabase Backend",
+                "info": "Real-time data management, authentication, and storage powered by Supabase for reliability and speed."
+            },
+            {
+                "id": 3,
+                "title": "shadcn UI Components",
+                "info": "Beautiful, accessible, and customizable UI built using shadcn component library."
+            },
+            {
+                "id": 4,
+                "title": "Mobile Optimization",
+                "info": "Fully responsive design for smooth operation on tablets and mobile devices."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "thumb": "3.jpg",
+        "thumbFull": "3-full.jpg",
+        "activeClass": "",
+        "tag": "WordPress, Business Website, Laser Engraving, UK",
+        "title": "Smart Laser UK - Rebranded  Business Website",
+        "detailsTitle": "Smart Laser UK - Rebranded WordPress Business Website",
+        "detailsIntro": "We delivered a fully rebranded and customized WordPress website for smart-laser.co.uk, a leading laser engraving business in the UK. The site showcases the company's services, product gallery, and enables direct customer contact through an integrated form.",
+        "detailsMain": "This business website was designed to highlight Smart Laser UK's expertise in laser engraving, with a modern, user-friendly interface. The gallery features high-quality images of their products and completed projects, while the contact form streamlines customer inquiries. The rebranding effort ensures a strong, professional online presence tailored for the UK market.",
+        "projectData": [
+            {
+                "id": 1,
+                "title": "WordPress Platform",
+                "info": "Custom-built and rebranded WordPress website for smart-laser.co.uk, tailored to the client's business needs."
+            },
+            {
+                "id": 2,
+                "title": "Laser Engraving Business Showcase",
+                "info": "Highlights the company's laser engraving services, expertise, and unique value proposition."
+            },
+            {
+                "id": 3,
+                "title": "Product Gallery",
+                "info": "Displays high-quality photos of products and completed engraving projects."
+            },
+            {
+                "id": 4,
+                "title": "Contact Form Integration",
+                "info": "Enables direct customer inquiries and quote requests through a user-friendly contact form."
+            },
+            {
+                "id": 5,
+                "title": "UK-Based Business",
+                "info": "Website content and branding tailored for the UK market, emphasizing local presence."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "thumb": "2.jpg",
+        "thumbFull": "2-full.jpg",
+        "activeClass": "",
+        "tag": "SaaS, Artist Management, React, Node.js, SQL, Bootstrap",
+        "title": "Artist Management System (SaaS)",
+        "detailsTitle": "Artist Management System (SaaS)",
+        "detailsIntro": "Artist Management System is a SaaS platform designed to connect artists and event organizers. Artists can create profiles and showcase their work, while event organizers can browse, evaluate, and book artists directly through the platform.",
+        "detailsMain": "This project involved building a robust, scalable system where artists manage their portfolios and event organizers can easily find and hire talent. The platform features user registration, artist profiles, portfolio galleries, and a secure booking workflow. Built with React for the frontend, Node.js and SQL for the backend, and styled with Bootstrap, the system delivers a seamless experience for both artists and organizers.",
+        "projectData": [
+            {
+                "id": 1,
+                "title": "Artist & Organizer Roles",
+                "info": "Artists can create and manage profiles, while event organizers can search and book artists for events."
+            },
+            {
+                "id": 2,
+                "title": "Portfolio Showcase",
+                "info": "Artists upload and display their work, making it easy for organizers to evaluate talent."
+            },
+            {
+                "id": 3,
+                "title": "Booking & Communication",
+                "info": "Organizers can contact and book artists directly through the platform, streamlining the hiring process."
+            },
+            {
+                "id": 4,
+                "title": "Modern Tech Stack",
+                "info": "Developed using React, Node.js, SQL, and Bootstrap for a responsive, scalable SaaS solution."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "thumb": "6.jpg",
+        "thumbFull": "6-full.jpg",
+        "activeClass": "",
+        "tag": "POS System, SaaS, Next.js, Node.js, MongoDB, Tailwind, shadcn UI",
+        "title": "Vehicle Spare Parts POS System (SaaS)",
+        "detailsTitle": "Vehicle Spare Parts POS System (SaaS)",
+        "detailsIntro": "This POS system was developed for a vehicle spare part shop, designed as a SaaS platform for internal use by shop workers and owners. The system streamlines billing, inventory, and order management, with a focus on efficiency and reliability.",
+        "detailsMain": "Our solution enables shop staff to quickly print bills, manage inventory, process orders, and test parts, all within a secure, user-friendly interface. Built with Next.js for the frontend, Node.js and MongoDB for the backend, and styled using Tailwind CSS and shadcn UI, the platform is both modern and highly customizable for automotive retail needs.",
+        "projectData": [
+            {
+                "id": 1,
+                "title": "Bill Printing",
+                "info": "Fast and accurate bill generation and printing for every transaction."
+            },
+            {
+                "id": 2,
+                "title": "Inventory Management",
+                "info": "Track, update, and manage spare parts inventory in real time."
+            },
+            {
+                "id": 3,
+                "title": "Order Management",
+                "info": "Efficiently handle customer orders, from creation to fulfillment."
+            },
+            {
+                "id": 4,
+                "title": "Part Testing",
+                "info": "Integrated tools for testing and verifying spare parts before sale."
+            },
+            {
+                "id": 5,
+                "title": "Modern Tech Stack",
+                "info": "Developed using Next.js, Node.js, MongoDB, Tailwind CSS, and shadcn UI for a robust, scalable solution."
+            }
+        ]
+    }
+]
