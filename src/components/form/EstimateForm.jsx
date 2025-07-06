@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import Slider from 'react-slider';
+import { Slider } from '@mui/material';
 import { toast } from 'react-toastify';
 import CustomSelect from '../select/CustomSelect';
 
@@ -68,10 +68,21 @@ const EstimateForm = () => {
                                 min={40}
                                 max={100000}
                                 value={value}
-                                onChange={handleChange}
-                                className='range-bar'
-                                thumbClassName="range-thumb"
-                                trackClassName="range-track"
+                                onChange={(event, newValue) => handleChange(newValue)}
+                                sx={{
+                                    '& .MuiSlider-thumb': {
+                                        backgroundColor: '#007bff',
+                                        '&:hover': {
+                                            backgroundColor: '#0056b3',
+                                        },
+                                    },
+                                    '& .MuiSlider-track': {
+                                        backgroundColor: '#007bff',
+                                    },
+                                    '& .MuiSlider-rail': {
+                                        backgroundColor: '#e0e0e0',
+                                    },
+                                }}
                             />
                         </div>
                     </div>
