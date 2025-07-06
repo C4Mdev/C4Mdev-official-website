@@ -1,6 +1,7 @@
 import React from 'react';
 import shape37 from '@/assets/img/shape/37.png';
 import Image from 'next/image';
+import Link from 'next/link';
 import ContactInfo from './ContactInfo';
 import ContactForm from './ContactForm';
 
@@ -18,7 +19,7 @@ const ContactStyle1 = () => {
                                 <h4 className="sub-heading secondary">Let's Shape the Future</h4>
                                 <h2 className="title">Collaborate with us to bring your boldest ideas to life</h2>
                                 <div className="button mt-35">
-                                    <a className="btn circle btn-md btn-gradient" href="/contact-us">Start the Conversation</a>
+                                    <Link className="btn circle btn-md btn-gradient" href="/contact-us">Start the Conversation</Link>
                                 </div>
                             </div>
                         </div>

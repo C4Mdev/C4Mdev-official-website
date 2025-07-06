@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import Slider from 'react-rangeslider';
+import Slider from 'react-slider';
 import { toast } from 'react-toastify';
 import CustomSelect from '../select/CustomSelect';
 
@@ -65,12 +65,13 @@ const EstimateForm = () => {
                                 <input type="text" id="amount" placeholder={`$${value}`} readOnly />
                             </p>
                             <Slider
-                                tooltip={false}
                                 min={40}
                                 max={100000}
                                 value={value}
                                 onChange={handleChange}
                                 className='range-bar'
+                                thumbClassName="range-thumb"
+                                trackClassName="range-track"
                             />
                         </div>
                     </div>

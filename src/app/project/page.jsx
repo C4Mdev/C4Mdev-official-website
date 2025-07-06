@@ -9,7 +9,7 @@ export const metadata = {
 const ProjectPage = () => {
     return (
         <>
-            <LayoutStyle7 breadCrumb="Project" title="Latest Software Projects">
+            <LayoutStyle7 breadCrumb="Project" title="Latest Projects">
                 <ProjectStyle2 />
             </LayoutStyle7>
         </>

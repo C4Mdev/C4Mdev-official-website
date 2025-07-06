@@ -15,7 +15,7 @@ const ProjectDetailsPage = async ({ params }) => {
 
     return (
         <>
-            <LayoutStyle7 breadCrumb="Project-details" title="Software Project Details">
+            <LayoutStyle7 breadCrumb="Project details" title="Project Details">
                 {data && <ProjectDetailsContent projectInfo={data} />}
             </LayoutStyle7>
         </>

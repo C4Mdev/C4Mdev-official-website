@@ -9,6 +9,17 @@
         "detailsTitle": "DRC Book Shop POS System",
         "detailsIntro": "This project is a cutting-edge Point of Sale (POS) system built with Next.js for a fast, seamless user experience, Supabase for real-time backend and authentication, and shadcn UI for a beautiful, accessible interface. Designed for modern businesses, it enables efficient sales, inventory management, and reporting from any device.",
         "detailsMain": "Our Next.js POS system leverages the power of Supabase for secure, scalable data management and real-time updates, while shadcn UI ensures a sleek, intuitive user experience. The platform supports multi-device access, robust analytics, and easy integration with third-party services, making it ideal for retail, restaurants, and service businesses seeking digital transformation.",
+        "projectInfo": {
+            "client": "DRC Book Shop",
+            "date": "15 March, 2024",
+            "address": "Dhaka, Bangladesh",
+            "category": "POS System",
+            "duration": "3 months"
+        },
+        "galleryImages": [
+            "5.jpg",
+            "6.jpg"
+        ],
         "projectData": [
             {
                 "id": 1,
@@ -42,6 +53,18 @@
         "detailsTitle": "Smart Laser UK - Rebranded WordPress Business Website",
         "detailsIntro": "We delivered a fully rebranded and customized WordPress website for smart-laser.co.uk, a leading laser engraving business in the UK. The site showcases the company's services, product gallery, and enables direct customer contact through an integrated form.",
         "detailsMain": "This business website was designed to highlight Smart Laser UK's expertise in laser engraving, with a modern, user-friendly interface. The gallery features high-quality images of their products and completed projects, while the contact form streamlines customer inquiries. The rebranding effort ensures a strong, professional online presence tailored for the UK market.",
+        "projectInfo": {
+            "client": "Smart Laser UK",
+            "clientWebsite": "https://smart-laser.co.uk/",
+            "date": "10 January, 2024",
+            "address": "London, United Kingdom",
+            "category": "Business Website",
+            "duration": "2 months"
+        },
+        "galleryImages": [
+            "3.jpg",
+            "4.jpg"
+        ],
         "projectData": [
             {
                 "id": 1,
@@ -80,6 +103,17 @@
         "detailsTitle": "Artist Management System (SaaS)",
         "detailsIntro": "Artist Management System is a SaaS platform designed to connect artists and event organizers. Artists can create profiles and showcase their work, while event organizers can browse, evaluate, and book artists directly through the platform.",
         "detailsMain": "This project involved building a robust, scalable system where artists manage their portfolios and event organizers can easily find and hire talent. The platform features user registration, artist profiles, portfolio galleries, and a secure booking workflow. Built with React for the frontend, Node.js and SQL for the backend, and styled with Bootstrap, the system delivers a seamless experience for both artists and organizers.",
+        "projectInfo": {
+            "client": "Event Management Co.",
+            "date": "5 December, 2023",
+            "address": "New York, USA",
+            "category": "SaaS Platform",
+            "duration": "4 months"
+        },
+        "galleryImages": [
+            "2.jpg",
+            "7.jpg"
+        ],
         "projectData": [
             {
                 "id": 1,
@@ -113,6 +147,17 @@
         "detailsTitle": "Vehicle Spare Parts POS System (SaaS)",
         "detailsIntro": "This POS system was developed for a vehicle spare part shop, designed as a SaaS platform for internal use by shop workers and owners. The system streamlines billing, inventory, and order management, with a focus on efficiency and reliability.",
         "detailsMain": "Our solution enables shop staff to quickly print bills, manage inventory, process orders, and test parts, all within a secure, user-friendly interface. Built with Next.js for the frontend, Node.js and MongoDB for the backend, and styled using Tailwind CSS and shadcn UI, the platform is both modern and highly customizable for automotive retail needs.",
+        "projectInfo": {
+            "client": "Auto Parts Express",
+            "date": "20 February, 2024",
+            "address": "Toronto, Canada",
+            "category": "POS System",
+            "duration": "3.5 months"
+        },
+        "galleryImages": [
+            "6.jpg",
+            "8.jpg"
+        ],
         "projectData": [
             {
                 "id": 1,

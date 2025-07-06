@@ -3,7 +3,7 @@ import React from 'react';
 import SocialShare from '../utilities/SocialShare';
 
 const ProjectDetailsContent = ({ projectInfo }) => {
-    const { thumbFull, projectData, detailsTitle, detailsIntro, detailsMain } = projectInfo
+    const { thumbFull, projectData, detailsTitle, detailsIntro, detailsMain, projectInfo: projectDetails, galleryImages } = projectInfo
 
     return (
         <>
@@ -20,13 +20,26 @@ const ProjectDetailsContent = ({ projectInfo }) => {
                                         <h4 className="title">Project Info</h4>
                                         <ul>
                                             <li>
-                                                Client <span>themeforest.validthemes.com</span>
+                                                Client <span>
+                                                    {projectDetails?.clientWebsite ? (
+                                                        <a 
+                                                            href={projectDetails.clientWebsite} 
+                                                            target="_blank" 
+                                                            rel="noopener noreferrer"
+                                                            style={{ color: 'inherit', textDecoration: 'underline' }}
+                                                        >
+                                                            {projectDetails.client}
+                                                        </a>
+                                                    ) : (
+                                                        projectDetails?.client || 'N/A'
+                                                    )}
+                                                </span>
                                             </li>
                                             <li>
-                                                Date <span>25 February, 2022</span>
+                                                Category <span>{projectDetails?.category || 'N/A'}</span>
                                             </li>
                                             <li>
-                                                Address <span>1401, 21st Street STE R4569, California</span>
+                                                Duration <span>{projectDetails?.duration || 'N/A'}</span>
                                             </li>
                                         </ul>
                                         <ul className="social">
@@ -50,19 +63,25 @@ const ProjectDetailsContent = ({ projectInfo }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="main-content">
+                        {/* <div className="main-content">
                             <p>
                                 {detailsMain}
                             </p>
-                            <div className="row">
-                                <div className="col-lg-6 col-md-6">
-                                    <Image src="/assets/img/gallery/3.jpg" alt="Thumb" width={800} height={600} />
+                            {galleryImages && galleryImages.length > 0 && (
+                                <div className="row">
+                                    {galleryImages.map((image, index) => (
+                                        <div key={index} className="col-lg-6 col-md-6">
+                                            <Image 
+                                                src={`/assets/img/gallery/${image}`} 
+                                                alt={`Project Gallery ${index + 1}`} 
+                                                width={800} 
+                                                height={600} 
+                                            />
+                                        </div>
+                                    ))}
                                 </div>
-                                <div className="col-lg-6 col-md-6">
-                                    <Image src="/assets/img/gallery/6.jpg" alt="Thumb" width={800} height={600} />
-                                </div>
-                            </div>
-                        </div>
+                            )}
+                        </div> */}
                     </div>
                 </div>
             </div>

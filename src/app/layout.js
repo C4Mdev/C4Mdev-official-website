@@ -1,11 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'swiper/css';
 import 'swiper/css/bundle';
-import 'react-modal-video/css/modal-video.css';
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-photo-view/dist/react-photo-view.css';
 import 'react-circular-progressbar/dist/styles.css';
-import 'react-rangeslider/lib/index.css'
 import 'animate.css';
 
 import '@/assets/css/animate.css';
