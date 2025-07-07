@@ -7,7 +7,7 @@ const ContactInfo = () => {
             <div className="contact-style-one-info">
                 <h2>Contact Information</h2>
                 <p>
-                    Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing.
+                    Reach out to us for expert advice, project inquiries, or partnership opportunities. Our team is ready to help you achieve your business goals with innovative digital solutions.
                 </p>
                 <ul>
 

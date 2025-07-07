@@ -3,7 +3,7 @@ import ProjectStyle2 from '@/components/project/ProjectStyle2';
 import React from 'react';
 
 export const metadata = {
-    title: "Code4MatesDev - Software Projects"
+    title: "Code4MatesDev - Our Works"
 }
 
 const ProjectPage = () => {

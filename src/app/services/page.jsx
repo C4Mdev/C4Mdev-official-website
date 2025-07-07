@@ -9,13 +9,13 @@ import TestimonialStyle1 from '@/components/testimonial/TestimonialStyle1';
 import React from 'react';
 
 export const metadata = {
-    title: "Code4MatesDev - Software Services"
+    title: "Code4MatesDev - Services"
 }
 
 const Service2Page = () => {
     return (
         <>
-            <LayoutStyle7 breadCrumb="services" title="Software Services">
+            <LayoutStyle7 breadCrumb="services" title="Our Services">
                 {/* <AboutStyle2 /> */}
                 <ServicesStyle2 />
                 <ProcessStyle1 />

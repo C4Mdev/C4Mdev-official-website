@@ -28,8 +28,8 @@ const ProcessStyle1 = ({ sectionClass }) => {
                         <div className="col-lg-8 offset-lg-2">
                             <div className="site-heading text-center">
                                 <h4 className="sub-heading">Our Process</h4>
-                                <h2 className="title">Proven Agile-Driven Process <br /> for Maximum Value</h2>
-                                <p>We follow a proven, agile-driven process to ensure timely delivery and maximum value:</p>
+                                <h2 className="title">Proven Agile Driven Process <br /> for Maximum Value</h2>
+                                {/* <p>We follow a proven, agile-driven process to ensure timely delivery and maximum value:</p> */}
                                 <div className="devider"></div>
                             </div>
                         </div>

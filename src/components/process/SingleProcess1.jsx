@@ -11,7 +11,7 @@ const SingleProcess1 = ({ process }) => {
                 <span>{steps}</span>
             </div>
             <h4>{title}</h4>
-            <p>{text}</p>
+            <p style={{ textAlign: 'justify' }}>{text}</p>
         </>
     );
 };

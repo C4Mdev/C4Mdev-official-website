@@ -12,7 +12,7 @@ const SingleOverViewTab = ({ software }) => {
                     <Image src={`/assets/img/about/${thumb}`} alt="Image not found" width={1200} height={900} />
                     <div className="overlay">
                         <h3>{title}</h3>
-                        <p>{text}</p>
+                        <p style={{ textAlign: 'justify' }}>{text}</p>
                         <Link href="#"><i className="fas fa-arrow-right"></i></Link>
                     </div>
                 </div>

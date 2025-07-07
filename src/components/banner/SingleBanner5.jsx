@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
 
@@ -64,7 +65,13 @@ const SingleBanner5 = ({ banner }) => {
                 </div>
             </div>
             <div className="banner-shape-bg">
-                <img src={`/assets/img/shape/${shape}`} alt="Shape" />
+                <Image 
+                    src={`/assets/img/shape/${shape}`} 
+                    alt="Shape" 
+                    width={500}
+                    height={300}
+                    style={{ width: 'auto', height: 'auto' }}
+                />
             </div>
         </>
     );

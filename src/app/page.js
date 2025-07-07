@@ -12,7 +12,7 @@ import TestimonialStyle1 from '@/components/testimonial/TestimonialStyle1';
 import React from 'react';
 
 export const metadata = {
-    title: "Code4MatesDev - Redefining Digital Excellence for Visionary Businesses"
+    title: "Code4MatesDev - Home"
 }
 
 export default function HomePage() {

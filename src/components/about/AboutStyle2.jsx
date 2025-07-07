@@ -27,7 +27,7 @@ const AboutStyle2 = ({ sectionClass }) => {
                         </div>
                         <div className="about-style-two col-lg-6 offset-lg-1">
                             <h2 className="title">Software Solutions for <br /> Digital Transformation</h2>
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 We work to understand your technical challenges and are driven to ask better questions in the pursuit of
                                 building innovative software solutions. Our team of experienced developers and architects collaborates
                                 closely with your business to deliver scalable, secure, and user-friendly applications that drive growth

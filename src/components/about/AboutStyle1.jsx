@@ -18,25 +18,25 @@ const AboutStyle1 = () => {
                 </div>
                 <div className="container">
                     <div className="row align-center">
-                        <div className="about-style-one col-xl-6 col-lg-5">
+                        <div className="about-style-three col-xl-6 col-lg-5">
                             
-                            <h4 className="sub-heading">Who We Are</h4>
-                            <h2 className="title mb-25">Innovative Software Solutions for Tomorrow</h2>
-                            <p>
+                            <h4 className="sub-heading secondary">Who We Are</h4>
+                            <h2 className="heading">Innovative Digital Solutions for Tomorrow</h2>
+                            <p style={{ textAlign: 'justify' }}>
                                 Code4MatesDev is a dynamic software development firm committed to delivering innovative, scalable, and user-centric solutions. Our team comprises experienced developers, designers, and strategists who work collaboratively to transform ideas into high-performance applications and digital experiences.
                             </p>
                             
                             <div className="mb-30">
                                 <h4 className="mb-15"><strong>Our Mission</strong></h4>
-                                <p>
-                                    To empower businesses and individuals with cutting-edge software solutions that drive growth, improve efficiency, and enhance user satisfaction through relentless innovation and technical excellence.
+                                <p style={{ textAlign: 'justify' }}>
+                                    To empower businesses and individuals with cutting-edge digital solutions that drive growth, improve efficiency, and enhance user satisfaction through relentless innovation and technical excellence.
                                 </p>
                             </div>
 
                             <div>
                                 <h4 className="mb-15"><strong>Our Vision</strong></h4>
-                                <p>
-                                    To be a global leader in software services, renowned for pioneering technologies that shape the future and create lasting value for our clients, partners, and communities.
+                                <p style={{ textAlign: 'justify' }}>
+                                    To be a global leader in Digital services, renowned for pioneering technologies that shape the future and create lasting value for our clients, partners, and communities.
                                 </p>
                             </div>
                         </div>

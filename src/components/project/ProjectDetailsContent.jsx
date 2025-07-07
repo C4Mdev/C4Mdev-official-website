@@ -63,11 +63,11 @@ const ProjectDetailsContent = ({ projectInfo }) => {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="main-content">
+                        <div className="main-content">
                             <p>
                                 {detailsMain}
                             </p>
-                            {galleryImages && galleryImages.length > 0 && (
+                            {/* {galleryImages && galleryImages.length > 0 && (
                                 <div className="row">
                                     {galleryImages.map((image, index) => (
                                         <div key={index} className="col-lg-6 col-md-6">
@@ -80,8 +80,8 @@ const ProjectDetailsContent = ({ projectInfo }) => {
                                         </div>
                                     ))}
                                 </div>
-                            )}
-                        </div> */}
+                            )} */}
+                        </div>
                     </div>
                 </div>
             </div>

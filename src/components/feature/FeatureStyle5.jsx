@@ -11,7 +11,7 @@ const FeatureStyle5 = () => {
                         <div className="col-lg-8 offset-lg-2">
                             <div className="site-heading text-center secondary">
                                 <h4 className="sub-heading">Our Expertise</h4>
-                                <h2 className="title">Complete Software Solutions for <br /> Every Digital Need</h2>
+                                <h2 className="title">Complete Digital Solutions for <br /> Every Digital Need</h2>
                             </div>
                         </div>
                     </div>

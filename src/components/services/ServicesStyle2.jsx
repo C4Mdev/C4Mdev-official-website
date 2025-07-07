@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Services2Data from '@/assets/jsonData/services/Services2Data.json'
 import SingleServices2 from './SingleServices2';
@@ -5,6 +6,16 @@ import SingleServices2 from './SingleServices2';
 const ServicesStyle2 = () => {
     return (
         <>
+            <style jsx>{`
+                .service-card-hover {
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                }
+                .service-card-hover:hover {
+                    box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+                    transform: translateY(-5px);
+                }
+            `}</style>
             <div className="services-style-two-area default-padding bottom-less bg-cover bg-gray"
                 style={{ backgroundImage: `url(/assets/img/shape/27.png)` }}>
                 <div className="container">
@@ -12,7 +23,7 @@ const ServicesStyle2 = () => {
                         <div className="col-lg-8 offset-lg-2">
                             <div className="site-heading text-center">
                                 <h4 className="sub-heading">Our Expertise</h4>
-                                <h2 className="title">Software Solutions We Deliver</h2>
+                                <h2 className="title">Digital Solutions We Deliver</h2>
                                 <div className="devider"></div>
                             </div>
                         </div>

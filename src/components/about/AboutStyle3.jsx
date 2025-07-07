@@ -31,13 +31,13 @@ const AboutStyle3 = () => {
                         <div className="col-lg-6 offset-lg-1">
                             <div className="about-style-three">
                                 <h4 className="sub-heading secondary">Why Choose Us</h4>
-                                <h2 className="heading">Why Partner with Code4MatesDev?</h2>
+                                <h2 className="heading">Why Partner with Us?</h2>
                                 <Animate className="animate__animated animate__fadeInUp">
                                     <div className="list-item-style-two">
                                         <div className="number">01</div>
                                         <div className="info">
                                             <h4>Innovative Solutions</h4>
-                                            <p>
+                                            <p style={{ textAlign: 'justify' }}>
                                                 We leverage the latest technologies and creative thinking to deliver software that solves real business challenges and drives growth for our clients.
                                             </p>
                                         </div>
@@ -48,7 +48,7 @@ const AboutStyle3 = () => {
                                         <div className="number">02</div>
                                         <div className="info">
                                             <h4>Technical Excellence & Partnership</h4>
-                                            <p>
+                                            <p style={{ textAlign: 'justify' }}>
                                                 Our experienced team works as your technology partner, ensuring quality, transparency, and ongoing support from concept to deployment and beyond.
                                             </p>
                                         </div>

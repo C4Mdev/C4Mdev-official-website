@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
 import shape40 from '@/assets/img/shape/40.png'
@@ -37,7 +38,18 @@ const ValuesSection = () => {
     ];
 
     return (
-        <div className="feature-style-two-area default-padding bottom-less bg-gray about-us-values-section" style={{ backgroundImage: `url(/assets/img/shape/45.png)` }}>
+        <>
+            <style jsx>{`
+                .value-card-hover {
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                }
+                .value-card-hover:hover {
+                    box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+                    transform: translateY(-5px);
+                }
+            `}</style>
+            <div className="feature-style-two-area default-padding bottom-less bg-gray about-us-values-section" style={{ backgroundImage: `url(/assets/img/shape/45.png)` }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 offset-lg-2">
@@ -53,9 +65,9 @@ const ValuesSection = () => {
                 <div className="row relative">
                     {values.map((value, index) => (
                         <div className="col-lg-4 col-md-6 mb-30" key={index}>
-                            <div className="feature-style-two">
+                            <div className="feature-style-two mb-30 value-card-hover">
                                 <Image src={`/assets/img/icon/${value.icon}`} width={430} height={430} alt="Icon" />
-                                <h4>{value.title}</h4>
+                                <h4 className="mb-15"><strong>{value.title}</strong></h4>
                                 <p>{value.description}</p>
                             </div>
                         </div>
@@ -66,6 +78,7 @@ const ValuesSection = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

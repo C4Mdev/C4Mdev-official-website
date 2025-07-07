@@ -10,7 +10,7 @@ export const metadata = {
 const ContactUs = () => {
     return (
         <>
-            <LayoutStyle7 breadCrumb="contact-us" title="Contact Us">
+            <LayoutStyle7 breadCrumb="contact Us" title="Contact Us">
                 <ContactUsContent />
                 {/* <ContactMap /> */}
             </LayoutStyle7>
