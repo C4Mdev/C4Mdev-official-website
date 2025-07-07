@@ -13,7 +13,7 @@ const SingleOverViewTab = ({ software }) => {
                     <div className="overlay">
                         <h3>{title}</h3>
                         <p style={{ textAlign: 'justify' }}>{text}</p>
-                        <Link href="#"><i className="fas fa-arrow-right"></i></Link>
+                        <Link href="/services"><i className="fas fa-arrow-right"></i></Link>
                     </div>
                 </div>
             </div>

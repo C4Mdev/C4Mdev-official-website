@@ -24,9 +24,9 @@ const AboutStyle6 = () => {
                         </div>
                         <div className="col-lg-5 offset-lg-1">
                             <div className="about-style-six-info">
-                                <h4 className="sub-heading secondary">About Code4MatesDev</h4>
+                                <h4 className="sub-heading secondary">About Us</h4>
                                 <h2 className="title">Transforming Ideas Into Digital Excellence</h2>
-                                <p>
+                                <p style={{ textAlign: 'justify' }}>
                                     We are a passionate team of software engineers and designers dedicated to creating innovative solutions that drive business growth. We turn complex challenges into streamlined, powerful software that delivers real results.
                                 </p>
                                 <ul className="list-regular">
