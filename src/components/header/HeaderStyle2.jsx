@@ -3,6 +3,7 @@ import React from 'react';
 import MainMenu from './MainMenu';
 import HeaderLogo from './HeaderLogo';
 import Image from 'next/image';
+import Link from 'next/link';
 import logo from '@/assets/img/logo.png';
 import useStickyMenu from '../hooks/useStickyMenu';
 import useSubMenuToggle from '../hooks/useSubMenuToggle';
@@ -29,7 +30,7 @@ const HeaderStyle2 = () => {
                             </div>
                             <MainMenu navbarPlacement="navbar-center" isOpen={isOpen} closeMenu={closeMenu} toggleSubMenu={toggleSubMenu} />
                             <div className="nav-contact-btn-mobile">
-                                <a href="/contact-us">Contact Us</a>
+                                <Link href="/contact-us">Contact Us</Link>
                             </div>
                         </div>
                         <div className="attr-right">
