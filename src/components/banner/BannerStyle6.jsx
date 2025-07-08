@@ -41,12 +41,12 @@ const BannerStyle6 = () => {
 
                                         <Animate className="animate__animated animate__fadeInUp" delay="500ms" duration="400ms">
                                             <h2>
-                                                Redefining Digital Excellence for Visionary Businesses
+                                                Redefining Digital Excellence for Your Visionary Businesses
                                             </h2>
                                         </Animate>
 
                                         <Animate className="animate__animated animate__fadeInUp" delay="900ms" duration="400ms">
-                                            <p>
+                                            <p style={{ textAlign: 'justify' }}>
                                                 At Code4MatesDev, we craft groundbreaking digital solutions that empower businesses to lead, innovate, and succeed in an ever-changing world.
                                             </p>
                                         </Animate>

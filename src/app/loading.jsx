@@ -24,7 +24,7 @@ const Loading = () => {
                                 E
                             </span>
                             <span data-text-preloader="V" className="letters-loading">
-                                W
+                                V
                             </span>
                         </div>
                     </div>

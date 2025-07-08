@@ -117,7 +117,7 @@ const ContactForm = () => {
                                 </>
                             ) : (
                                 <>
-                                    <i className="fa fa-paper-plane"></i> Get in Touch
+                            <i className="fa fa-paper-plane"></i> Get in Touch
                                 </>
                             )}
                         </button>

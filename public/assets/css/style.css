@@ -123,6 +123,7 @@ Sidebar heading:  20px 'Outfit', sans-serif
 body,
 html {
 	height: 100%;
+	min-height: 100%;
 }
 
 html {
@@ -131,6 +132,13 @@ html {
 	width: 100%;
 	height: 100%;
 	scroll-behavior: smooth;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1 0 auto;
 }
 
 html,
@@ -1596,6 +1604,65 @@ p {
 }
 
 /* ============================================================== 
+    # Navbar Styles
+=================================================================== */
+
+/* Mobile logo size */
+/* General logo size inside mobile menu */
+.collapse-mobile > img,
+.collapse-mobile .navbar-logo,
+.collapse-mobile .logo,
+.collapse-mobile .header-logo {
+  width: 100%;
+  max-width: 240px;   /* Adjust as needed for your design */
+  height: auto;       /* Maintains the original aspect ratio */
+  display: block;
+  margin: 16px auto 16px auto; /* Center horizontally, add spacing */
+  object-fit: contain; /* Ensures the image never gets distorted */
+}
+@media (max-width: 480px) {
+  .collapse-mobile > img,
+  .collapse-mobile .navbar-logo,
+  .collapse-mobile .logo,
+  .collapse-mobile .header-logo {
+    max-width: 240px;
+    margin: 12px auto 12px auto;
+  }
+}
+
+/* Hide the mobile contact button on desktop, show on mobile */
+.nav-contact-btn-mobile {
+	display: block;
+	width: 60%;
+	margin: 20px 0 10px 0;
+	text-align: center;
+  }
+  .nav-contact-btn-mobile a {
+	display: inline-block;
+	background: #3B82F6;         /* Your primary brand color */
+	color: #fff;
+	padding: 12px 0;
+	width: 100%;
+	border-radius: 5px;
+	font-weight: 600;
+	font-size: 1.1rem;
+	text-decoration: none;
+	transition: background 0.2s;
+	align-items: left;
+  }
+  .nav-contact-btn-mobile a:hover {
+	background: #1d2027 !important;  
+	color: #fff; ;       /* Slightly darker on hover */
+  }
+  
+  @media (min-width: 992px) {
+	.nav-contact-btn-mobile {
+	  display: none !important;
+	}
+  }
+
+
+/* ============================================================== 
     # Button Styles
 =================================================================== */
 
@@ -2400,7 +2467,7 @@ p {
 
 /* Our Values section on About Us page - set background to white */
 .about-us-values-section {
-  background-color: #fff !important;
+	background-color: #fff !important;
 }
 
 .animate-inout.animate-inout-borde:hover {
@@ -4121,6 +4188,7 @@ Sidebar heading:  20px 'Outfit', sans-serif
 body,
 html {
 	height: 100%;
+	min-height: 100%;
 }
 
 html {
@@ -4129,6 +4197,13 @@ html {
 	width: 100%;
 	height: 100%;
 	scroll-behavior: smooth;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1 0 auto;
 }
 
 html,
@@ -7007,6 +7082,147 @@ p {
 .breadcrum-shape img {
 	height: 100%;
 }
+
+/* ============================================================== 
+    # Home page banner Styles
+=================================================================== */
+
+/* Target the images inside the .banner-style-six .thumb container */
+.banner-style-six .thumb img:first-child {
+	width: 100%;
+	/* or a max-width, e.g. 60% if you want it smaller */
+	max-width: 1315px;
+	/* adjust as needed for desktop */
+	height: auto;
+	aspect-ratio: 1315 / 1400;
+	display: block;
+}
+
+.banner-style-six .thumb img:nth-child(2) {
+	width: auto;
+	/* or a max-width, e.g. 20% if you want it smaller */
+	max-width: 400px;
+	/* adjust as needed for desktop */
+	height: auto;
+	aspect-ratio: 333 / 757;
+	display: block;
+	margin-top: 1rem;
+	/* optional: space between images */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 767px) {
+	.banner-style-six .thumb img:first-child {
+		max-width: auto;
+		/* smaller on mobile */
+	}
+
+	.banner-style-six .thumb img:nth-child(2) {
+		max-width: auto;
+		/* smaller on mobile */
+	}
+}
+
+
+/* ============================================================== 
+    # Home page About Us Styles
+=================================================================== */
+
+@media (max-width: 767px) {
+
+	.about-style-six-thumb>img:nth-child(1),
+	.about-style-six-thumb>img:nth-child(2) {
+		display: none !important;
+	}
+}
+
+/* ============================================================== 
+    # Home page Our Impac Styles
+=================================================================== */
+
+@media (max-width: 767px) {
+	.soft-overview>img {
+		display: none !important;
+	}
+}
+
+/* ============================================================== 
+    # Home page Testomonial Styles
+=================================================================== */
+
+@media (max-width: 767px) {
+	.testimonial-thumb .thumb-item>img {
+		max-width: auto !important;
+		/* adjust as needed */
+		height: auto !important;
+		margin-top: 5rem;
+	}
+
+	.testimonial-thumb .mini-shape>img {
+		max-width: auto !important;
+		/* adjust as needed */
+		height: auto !important;
+
+	}
+}
+
+/* ============================================================== 
+    # footer mobile responsive
+=================================================================== */
+
+@media (max-width: 767px) {
+	.footer-top {
+		padding-top: 24px !important;
+		padding-bottom: 24px !important;
+	}
+
+	.footer-top .row {
+		flex-direction: column !important;
+		align-items: flex-start !important;
+		gap: 20px !important;
+	}
+
+	.footer-logo {
+		margin-bottom: 16px !important;
+		text-align: left !important;
+	}
+
+	.footer-links {
+		margin-bottom: 16px !important;
+	}
+
+	.footer-top .col-lg-6,
+	.footer-top .col-lg-2,
+	.footer-top .col-lg-3,
+	.footer-top .col-md-8,
+	.footer-top .col-md-2 {
+		width: 100% !important;
+		max-width: 100% !important;
+		flex: 0 0 100% !important;
+		margin-bottom: 0 !important;
+		padding-left: 12px !important;
+		padding-right: 12px !important;
+	}
+
+	.footer-bottom {
+		padding-top: 16px !important;
+		padding-bottom: 16px !important;
+		text-align: center !important;
+	}
+
+	.footer-bottom .d-flex {
+		flex-direction: column !important;
+		gap: 8px !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.footer-bottom p {
+		text-align: center !important;
+		width: 100% !important;
+	}
+}
+
 
 /* ============================================================== 
     # Topbar Styles
@@ -12886,17 +13102,19 @@ img.loader {
 footer .widget-title {
 	font-weight: 600;
 	font-size: 24px;
-	margin-bottom: 30px;
+
 }
 
 footer .logo img {
-	height: 60px;
+	height: 30px;
+
 }
 
 footer .logo {
 	margin-bottom: 30px;
 	height: 60px;
 	width: auto;
+	margin-top: 30px
 }
 
 footer .newsletter form {
@@ -13036,12 +13254,14 @@ footer::after {
 	transform: skewX(10deg);
 }
 
+
 .footer-shape {
 	position: absolute;
 	left: 0;
 	top: 0;
 	height: 100%;
 	width: 100%;
+	pointer-events: none;
 }
 
 .footer-shape .item:first-child {
@@ -13769,7 +13989,6 @@ footer::after {
 }
 
 .banner-style-six p {
-	padding-right: 15%;
 	font-size: 18px;
 	line-height: 1.7;
 }
@@ -14872,7 +15091,7 @@ ul.list-regular li::after {
 
 	.footer-bottom .text-end {
 		text-align: center !important;
-		margin-top: 10px;
+
 	}
 
 	.footer-shape .item:nth-child(2) img {
@@ -14959,6 +15178,20 @@ ul.list-regular li::after {
 		transform: translate(-50%, -50%);
 	}
 
+	.footer .footer-links {
+		pointer-events: auto !important;
+		z-index: 10;
+		position: relative;
+	}
+
+	.footer {
+		z-index: 20;
+		position: relative;
+	}
+
+	.footer-shape {
+		pointer-events: none;
+	}
 
 	/* Home solar */
 	.banner-area.banner-solar {
@@ -15753,7 +15986,7 @@ ul.list-regular li::after {
 
 	.footer-bottom .text-end {
 		text-align: center !important;
-		margin-top: 10px;
+
 	}
 
 	.footer-shape .item:nth-child(2) img {
@@ -16425,7 +16658,8 @@ ul.list-regular li::after {
 /* Custom Scroll To Top  */
 .to-top-progress {
 	z-index: 999999;
-	bottom: 50px !important;
+	right: 15px !important;
+	bottom: 15px !important;
 }
 
 .to-top-progress circle:nth-child(1) {
@@ -16444,5 +16678,5 @@ ul.list-regular li::after {
 	color: var(--color-primary);
 	font-size: 22px;
 	position: relative;
-	top: 3px;
+	top: 15px;
 }

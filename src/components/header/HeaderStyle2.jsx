@@ -22,12 +22,15 @@ const HeaderStyle2 = () => {
                         <HeaderLogo openMenu={openMenu} />
                         <div className={`collapse navbar-collapse collapse-mobile ${isOpen ? "show" : ""}`} id="navbar-menu">
                             <div className="collapse-header">
-                                <Image src={logo} alt="Logo" />
+                                <Image src={logo} alt="Logo" className="navbar-logo" />
                                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" onClick={closeMenu}>
                                     <i className="fa fa-times"></i>
                                 </button>
                             </div>
                             <MainMenu navbarPlacement="navbar-center" isOpen={isOpen} closeMenu={closeMenu} toggleSubMenu={toggleSubMenu} />
+                            <div className="nav-contact-btn-mobile">
+                                <a href="/contact-us">Contact Us</a>
+                            </div>
                         </div>
                         <div className="attr-right">
                             <div className="attr-nav">

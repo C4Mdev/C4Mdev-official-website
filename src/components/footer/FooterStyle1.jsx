@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image';
 import React from 'react';
 import shape7 from '@/assets/img/shape/7.png';
@@ -20,7 +21,7 @@ const FooterStyle1 = ({ shape, shapeClass, logo, formStyle }) => {
                     </div>
                 </div>
                 <div className="container">
-                    <div className="footer-top pt-40 pb-40 pt-xs-0 pb-xs-40">
+                    <div className="footer-top pt-40 pb-20 pt-xs-0 pb-xs-40">
                         <div className="row d-flex align-items-start justify-content-between">
                             {/* Column 1: Logo & Tagline */}
                             <div className="col-lg-6 col-md-8 text-start">
@@ -35,12 +36,11 @@ const FooterStyle1 = ({ shape, shapeClass, logo, formStyle }) => {
                             <div className="col-lg-2 col-md-2">
                                 <h5>Quick Links</h5>
                                 <ul className="footer-links ps-0 d-inline-block text-start">
-                                    <li><Link href="/">Home</Link></li>
-                                    <li><Link href="/about-us">About Us</Link></li>
-                                    <li><Link href="/services">Services</Link></li>
-                                    <li><Link href="/project">Our Works</Link></li>
-                                    <li><Link href="/blog-standard">Blog</Link></li>
-                                    <li><Link href="/contact-us">Contact Us</Link></li>
+                                    <li><Link href="/"><span>Home</span></Link></li>
+                                    <li><Link href="/project"><span>Our Works</span></Link></li>
+                                    <li><Link href="/services"><span>Services</span></Link></li>
+                                    <li><Link href="/about-us"><span>About Us</span></Link></li>                             
+                                    <li><Link href="/contact-us"><span>Contact Us</span></Link></li>
                                 </ul>
                             </div>
                             {/* Column 3: Contact Info */}

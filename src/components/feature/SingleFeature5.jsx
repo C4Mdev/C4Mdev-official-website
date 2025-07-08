@@ -11,7 +11,7 @@ const SingleFeature5 = ({ feature }) => {
                     <Image src={`/assets/img/icon/${thumb}`} alt="Image Not Found" width={500} height={500} />
                 </div>
                 <h3>{title}</h3>
-                <p>{text}</p>
+                <p style={{ textAlign: 'justify' }}>{text}</p>
             </div>
         </>
     );

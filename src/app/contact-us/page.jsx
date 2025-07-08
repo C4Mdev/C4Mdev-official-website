@@ -4,7 +4,7 @@ import ContactUsContent from '@/components/contact/ContactUsContent';
 import React from 'react';
 
 export const metadata = {
-    title: "Consua - Consulting Business - Contact Us"
+    title: "Code4MatesDev - Contact Us"
 }
 
 const ContactUs = () => {

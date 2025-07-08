@@ -49,7 +49,7 @@ const ProjectDetailsContent = ({ projectInfo }) => {
                                 </div>
                                 <div className="col-xl-8 col-lg-7 pr-35 pr-md-15 pr-xs-15 left-info mt-md-10">
                                     <h2>{detailsTitle}</h2>
-                                    <p>
+                                    <p style={{ textAlign: 'justify' }}>
                                         {detailsIntro}
                                     </p>
                                     <ul className="check-list">
@@ -64,7 +64,7 @@ const ProjectDetailsContent = ({ projectInfo }) => {
                             </div>
                         </div>
                         <div className="main-content">
-                            <p>
+                            <p style={{ textAlign: 'justify' }}>
                                 {detailsMain}
                             </p>
                             {/* {galleryImages && galleryImages.length > 0 && (

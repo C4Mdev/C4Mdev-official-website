@@ -19,6 +19,7 @@ import '@/assets/css/style.css';
 import Dependency from '@/components/utilities/Dependency';
 import { ToastContainer } from 'react-toastify';
 import { Manrope, Outfit } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const manrope = Manrope({ subsets: ["latin"] });
 const outfit = Outfit({ subsets: ["latin"] });
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
         <ToastContainer />
         <Dependency />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );

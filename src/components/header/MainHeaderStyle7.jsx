@@ -22,11 +22,14 @@ const MainHeaderStyle7 = () => {
                     <div className="container d-flex justify-content-between align-items-center">
                         <HeaderLogo openMenu={openMenu} />
                         <div className={`collapse navbar-collapse collapse-mobile ${isOpen ? "show" : ""}`} id="navbar-menu">
-                            <Image src={logo} alt="Logo" />
+                            <Image src={logo} alt="Logo" className="navbar-logo" />
                             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" onClick={closeMenu}>
                                 <i className="fa fa-times"></i>
                             </button>
                             <MainMenu navbarPlacement="navbar-right" isOpen={isOpen} closeMenu={closeMenu} toggleSubMenu={toggleSubMenu} />
+                            <div className="nav-contact-btn-mobile">
+                                <Link href="/contact-us">Contact Us</Link>
+                            </div>
                         </div>
                         <div className="attr-right">
                             <div className="attr-nav">

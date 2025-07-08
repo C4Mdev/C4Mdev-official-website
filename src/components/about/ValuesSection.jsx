@@ -26,7 +26,7 @@ const ValuesSection = () => {
             icon: "13.png"
         },
         {
-            title: "Customer-Centricity",
+            title: "Customer Centricity",
             description: "We put our clients' needs at the heart of everything we do.",
             icon: "14.png"
         },
@@ -68,7 +68,7 @@ const ValuesSection = () => {
                             <div className="feature-style-two mb-30 value-card-hover">
                                 <Image src={`/assets/img/icon/${value.icon}`} width={430} height={430} alt="Icon" />
                                 <h4 className="mb-15"><strong>{value.title}</strong></h4>
-                                <p>{value.description}</p>
+                                <p style={{ textAlign: 'justify' }}>{value.description}</p>
                             </div>
                         </div>
                     ))}
