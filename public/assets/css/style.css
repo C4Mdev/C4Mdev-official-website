@@ -120,27 +120,6 @@ Sidebar heading:  20px 'Outfit', sans-serif
 	padding: 0;
 }
 
-body,
-html {
-	height: 100%;
-	min-height: 100%;
-}
-
-html {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100%;
-	scroll-behavior: smooth;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-main {
-	flex: 1 0 auto;
-}
-
 html,
 body,
 div,
@@ -1625,7 +1604,7 @@ p {
   .collapse-mobile .navbar-logo,
   .collapse-mobile .logo,
   .collapse-mobile .header-logo {
-    max-width: 240px;
+    max-width: 200px;
     margin: 12px auto 12px auto;
   }
 }
@@ -3087,7 +3066,7 @@ p {
 =================================================================== */
 
 .top-style-one .logo img {
-	height: 60px;
+	height: 50px;
 }
 
 .top-style-one .social li {
@@ -4185,26 +4164,27 @@ Sidebar heading:  20px 'Outfit', sans-serif
 	padding: 0;
 }
 
-body,
-html {
+html, body, #__next {
 	height: 100%;
 	min-height: 100%;
-}
-
-html {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	height: 100%;
-	scroll-behavior: smooth;
+  }
+  
+  body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-}
-
-main {
+  }
+  
+  main {
 	flex: 1 0 auto;
-}
+  }
+  
+  footer {
+	flex-shrink: 0;
+  }
 
 html,
 body,
@@ -7169,6 +7149,14 @@ p {
 /* ============================================================== 
     # footer mobile responsive
 =================================================================== */
+
+/* Responsive fix for footer bottom */
+.footer-bottom .d-flex {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+  }
 
 @media (max-width: 767px) {
 	.footer-top {
@@ -14262,7 +14250,14 @@ ul.list-regular li::after {
 	background-repeat: no-repeat;
 	background-position: right;
 	z-index: -1;
+	pointer-events: none !important;
 }
+
+@media (max-width: 767px) {
+	.soft-overview .overlay::after {
+	  display: none !important;
+	}
+  }
 
 .soft-overview .overlay h1,
 .soft-overview .overlay h2,
@@ -16679,4 +16674,10 @@ ul.list-regular li::after {
 	font-size: 22px;
 	position: relative;
 	top: 15px;
+}
+
+@media (max-width: 767px) {
+    .to-top-progress {
+        bottom: 15px !important; /* Even higher on small screens */
+    }
 }
