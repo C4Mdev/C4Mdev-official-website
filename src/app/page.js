@@ -26,7 +26,7 @@ export default function HomePage() {
         <SoftwareOverview />
         {/* <PriceStyle1 priceTitle={true} sectionClass="secondary" /> */}
         {/* <SoftwareVideo /> */}
-        <TestimonialStyle1 sectionClass="secondary insurance" shapeBlue={true} />
+        {/* <TestimonialStyle1 sectionClass="secondary insurance" shapeBlue={true} /> */}
         {/* <TeamStyle1 sectionClass="bg-gray secondary" teamTitle={true} /> */}
         {/* <ContactStyle1 /> */}
       </LayoutStyle6>

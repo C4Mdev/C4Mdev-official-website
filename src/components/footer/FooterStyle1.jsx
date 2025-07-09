@@ -62,8 +62,11 @@ const FooterStyle1 = ({ shape, shapeClass, logo, formStyle }) => {
                                 &copy; {new Date().getFullYear()} Code4MatesDev. All rights reserved.
                             </p>
                             <p className="mb-0 text-end">
-                                <Link href="/privacy">Privacy Policy</Link> | <Link href="/terms">Terms of Service</Link>
+                                <Link href="">Privacy Policy</Link> | <Link href="">Terms of Service</Link>
                             </p>
+                            {/* <p className="mb-0 text-end">
+                                <Link href="/privacy">Privacy Policy</Link> | <Link href="/terms">Terms of Service</Link>
+                            </p> */}
                         </div>
                     </div>
                 </div>
