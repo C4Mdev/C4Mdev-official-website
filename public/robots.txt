@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.code4mates.com
+
+# Sitemaps
+Sitemap: https://www.code4mates.com/sitemap.xml

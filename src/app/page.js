@@ -12,7 +12,33 @@ import TestimonialStyle1 from '@/components/testimonial/TestimonialStyle1';
 import React from 'react';
 
 export const metadata = {
-    title: "Code4MatesDev - Home"
+    title: "Code4MatesDev - Home",
+    description: "Code4MatesDev: Leading provider of web development, software services, and digital solutions. Transform your business with custom web applications, cloud solutions, and expert consulting.",
+    keywords: [
+      "web development",
+      "software services",
+      "digital solutions",
+      "custom software",
+      "cloud solutions",
+      "business transformation",
+      "Next.js",
+      "Code4MatesDev"
+    ],
+    openGraph: {
+      title: "Code4MatesDev - Home",
+      description: "Code4MatesDev: Leading provider of web development, software services, and digital solutions.",
+      url: "https://www.code4mates.com/",
+      siteName: "Code4MatesDev",
+      type: "website",
+      images: [
+        {
+          url: "/assets/img/logo/logo.png",
+          width: 800,
+          height: 600,
+          alt: "Code4MatesDev Logo"
+        }
+      ]
+    }
 }
 
 export default function HomePage() {
