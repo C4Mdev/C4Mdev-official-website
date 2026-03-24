@@ -1,0 +1,158 @@
+.backRow {
+    padding: 100px 0 0;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.backLink:hover {
+    color: #fff;
+    transform: translateX(-2px);
+}
+
+.heroImage {
+    position: relative;
+    width: 100%;
+    margin-top: 24px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.07));
+    aspect-ratio: 1920 / 823;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.heroImg {
+    object-fit: cover;
+}
+
+.content {
+    padding: 40px 0 0;
+    max-width: 800px;
+}
+
+.category {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-primary, #6c63ff);
+}
+
+.title {
+    margin-top: 12px;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    color: var(--text-primary, #fff);
+}
+
+/* Full width of the page container (same band as hero / gallery) */
+.descriptionFull {
+    margin: 24px 0 0;
+    width: 100%;
+    max-width: none;
+    font-size: clamp(16px, 1.15vw, 18px);
+    line-height: 1.8;
+    color: var(--text-secondary, rgba(255, 255, 255, 0.65));
+    text-align: left;
+    white-space: pre-line;
+}
+
+.sectionLabel {
+    margin-top: 40px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(108, 99, 255, 0.35);
+    background: rgba(108, 99, 255, 0.1);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-primary, #6c63ff);
+}
+
+/* Full-width band so 3 thumbnails aren’t stuck in the narrow text column */
+.gallerySection {
+    width: 100%;
+    padding: 32px 0 80px;
+    margin-top: 8px;
+}
+
+.galleryHeading {
+    margin: 0 auto 20px;
+    max-width: 800px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(12px, 2vw, 22px);
+    width: 100%;
+    max-width: min(1100px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.galleryItem {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.07));
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.galleryImg {
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .backRow {
+        padding: 88px 0 0;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+}

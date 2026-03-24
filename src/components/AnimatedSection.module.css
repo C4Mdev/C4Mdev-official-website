@@ -1,0 +1,25 @@
+.animated {
+    opacity: 0;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.up {
+    transform: translateY(40px);
+}
+
+.left {
+    transform: translateX(-40px);
+}
+
+.right {
+    transform: translateX(40px);
+}
+
+.none {
+    transform: none;
+}
+
+.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}

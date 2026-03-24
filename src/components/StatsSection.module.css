@@ -1,0 +1,110 @@
+.stats {
+    padding: var(--section-padding) 0;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 64px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(108, 99, 255, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.iconWrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--stat-color, #6c63ff) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--stat-color, #6c63ff) 25%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--stat-color, #6c63ff);
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.card:hover .iconWrap {
+    background: color-mix(in srgb, var(--stat-color, #6c63ff) 20%, transparent);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--stat-color, #6c63ff) 30%, transparent);
+}
+
+.value {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.desc {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.5;
+}
+
+.glow {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.card:hover .glow {
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value {
+        font-size: 44px;
+    }
+}
