@@ -5,9 +5,19 @@ import PageHero from "@/components/PageHero";
 import OurLatestWorkSection from "@/components/OurLatestWorkSection";
 
 export const metadata: Metadata = {
-    title: "Our Works — Code4MatesDev",
+    title: "Our Works - Code4MatesDev",
     description:
         "Explore our portfolio of successful projects — web apps, SaaS platforms, mobile apps, and more.",
+    alternates: {
+        canonical: "/works",
+    },
+    openGraph: {
+        title: "Our Works - Code4MatesDev",
+        description:
+            "Explore our portfolio of successful projects — web apps, SaaS platforms, mobile apps, and more.",
+        url: "/works",
+        images: ["/LOGONEW_WHITE.png"],
+    },
 };
 
 export default function WorksPage() {

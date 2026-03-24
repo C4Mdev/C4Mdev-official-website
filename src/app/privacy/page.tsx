@@ -4,9 +4,19 @@ import Footer from "@/components/Footer";
 import styles from "@/components/LegalDocument.module.css";
 
 export const metadata: Metadata = {
-    title: "Privacy Policy — Code4MatesDev",
+    title: "Privacy Policy - Code4MatesDev",
     description:
         "How Code4MatesDev collects, uses, and protects your information when you use our website and services.",
+    alternates: {
+        canonical: "/privacy",
+    },
+    openGraph: {
+        title: "Privacy Policy - Code4MatesDev",
+        description:
+            "How Code4MatesDev collects, uses, and protects your information when you use our website and services.",
+        url: "/privacy",
+        images: ["/LOGONEW_WHITE.png"],
+    },
 };
 
 export default function PrivacyPolicyPage() {

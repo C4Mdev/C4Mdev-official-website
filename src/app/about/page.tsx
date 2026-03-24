@@ -6,9 +6,19 @@ import CTASection from "@/components/CTASection";
 import AboutUsHero from "@/components/AboutUsHero";
 
 export const metadata: Metadata = {
-    title: "About Us — Code4MatesDev",
+    title: "About Us - Code4MatesDev",
     description:
         "Learn about Code4MatesDev — a passionate team of software engineers and designers dedicated to creating innovative digital solutions.",
+    alternates: {
+        canonical: "/about",
+    },
+    openGraph: {
+        title: "About Us - Code4MatesDev",
+        description:
+            "Learn about Code4MatesDev — a passionate team of software engineers and designers dedicated to creating innovative digital solutions.",
+        url: "/about",
+        images: ["/LOGONEW_WHITE.png"],
+    },
 };
 
 export default function AboutPage() {

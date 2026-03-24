@@ -4,9 +4,19 @@ import Footer from "@/components/Footer";
 import styles from "@/components/LegalDocument.module.css";
 
 export const metadata: Metadata = {
-    title: "Terms of Service — Code4MatesDev",
+    title: "Terms of Service - Code4MatesDev",
     description:
         "Terms and conditions governing your use of Code4MatesDev's website and software development services.",
+    alternates: {
+        canonical: "/terms",
+    },
+    openGraph: {
+        title: "Terms of Service - Code4MatesDev",
+        description:
+            "Terms and conditions governing your use of Code4MatesDev's website and software development services.",
+        url: "/terms",
+        images: ["/LOGONEW_WHITE.png"],
+    },
 };
 
 export default function TermsOfServicePage() {

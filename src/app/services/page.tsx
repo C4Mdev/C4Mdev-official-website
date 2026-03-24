@@ -6,9 +6,19 @@ import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 
 export const metadata: Metadata = {
-    title: "Services — Code4MatesDev",
+    title: "Services - Code4MatesDev",
     description:
         "Discover our specialized services crafted to help your business grow with modern, scalable digital solutions.",
+    alternates: {
+        canonical: "/services",
+    },
+    openGraph: {
+        title: "Services - Code4MatesDev",
+        description:
+            "Discover our specialized services crafted to help your business grow with modern, scalable digital solutions.",
+        url: "/services",
+        images: ["/LOGONEW_WHITE.png"],
+    },
 };
 
 export default function ServicesPage() {

@@ -21,11 +21,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const project = getProjectBySlug(slug);
     if (!project) {
-        return { title: "Project — Code4MatesDev" };
+        return {
+            title: "Project - Code4MatesDev",
+            alternates: {
+                canonical: `/works/${slug}`,
+            },
+        };
     }
+    const canonical = `/works/${project.slug}`;
     return {
-        title: `${project.title} — Our Works — Code4MatesDev`,
+        title: `${project.title} - Our Works - Code4MatesDev`,
         description: project.description,
+        alternates: {
+            canonical,
+        },
+        openGraph: {
+            title: `${project.title} - Our Works - Code4MatesDev`,
+            description: project.description,
+            url: canonical,
+            images: [project.image],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: `${project.title} - Our Works - Code4MatesDev`,
+            description: project.description,
+            images: [project.image],
+        },
     };
 }
 

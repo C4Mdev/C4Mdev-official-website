@@ -5,9 +5,19 @@ import ContactForm from "@/components/ContactForm";
 import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
-    title: "Contact Us — Code4MatesDev",
+    title: "Contact Us - Code4MatesDev",
     description:
         "Get in touch with Code4MatesDev. Let's discuss your project and how we can help bring your vision to life.",
+    alternates: {
+        canonical: "/contact",
+    },
+    openGraph: {
+        title: "Contact Us - Code4MatesDev",
+        description:
+            "Get in touch with Code4MatesDev. Let's discuss your project and how we can help bring your vision to life.",
+        url: "/contact",
+        images: ["/LOGONEW_WHITE.png"],
+    },
 };
 
 export default function ContactPage() {
