@@ -122,10 +122,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(5, 5, 16, 0.97);
-    backdrop-filter: blur(20px);
-    z-index: 999;
-    padding: 100px 24px 40px;
+    background: rgba(3, 3, 8, 0.98);
+    backdrop-filter: blur(18px);
+    z-index: 1001; /* ensure it renders above the fixed header background */
+    padding: var(--space-80) var(--space-24) var(--space-24);
     transform: translateX(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -134,29 +134,100 @@
     transform: translateX(0);
 }
 
+.mobilePanel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobileTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 56px;
+}
+
+.mobileCloseBtn {
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mobileCloseBtn:hover {
+    background: rgba(108, 99, 255, 0.18);
+    border-color: rgba(108, 99, 255, 0.45);
+}
+
 .mobileLinks {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--space-16);
+    padding: 0;
+    margin: 0;
+}
+
+.mobileLogo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobileLogoImg {
+    height: 36px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
 }
 
 .mobileLink {
     display: block;
-    padding: 16px 20px;
-    font-size: 20px;
+    padding: 0;
+    font-size: 22px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.8);
-    border-radius: 12px;
-    transition: all 0.2s ease;
+    color: rgba(255, 255, 255, 0.92);
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .mobileLink:hover {
     color: #fff;
-    background: rgba(108, 99, 255, 0.1);
 }
 
-@media (max-width: 768px) {
+.mobileFooter {
+    margin-top: auto;
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-8);
+}
+
+.mobileFooterText {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.mobileFooterText a {
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+}
+
+.mobileFooterText a:hover {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 639px) {
     .links {
         display: none;
     }
@@ -173,8 +244,27 @@
         display: none;
     }
 
-    .logoImg {
-        height: 30px;
-        max-width: 220px;
+    .mobileTop {
+        margin-bottom: var(--space-48);
+    }
+
+    .mobileLogoImg {
+        height: 32px;
+        max-width: 200px;
+    }
+
+    .mobileLink {
+        font-size: 20px;
+    }
+
+    /* Center footer content inside the mobile drawer */
+    .mobileFooter {
+        text-align: center;
+    }
+
+    .mobileFooterText {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

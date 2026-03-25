@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProjectGalleryLightbox from "@/components/ProjectGalleryLightbox";
 import {
     getProjectBySlug,
     getAllProjectSlugs,
@@ -113,23 +114,10 @@ export default async function WorkProjectPage({ params }: Props) {
                         aria-label="Project gallery"
                     >
                         <h2 className={styles.galleryHeading}>Project gallery</h2>
-                        <div className={styles.gallery}>
-                            {project.galleryImages.slice(0, 3).map((src, i) => (
-                                <div
-                                    key={`${src}-${i}`}
-                                    className={styles.galleryItem}
-                                >
-                                    <Image
-                                        src={src}
-                                        alt={`${project.title} screenshot ${i + 1}`}
-                                        fill
-                                        loading="lazy"
-                                        sizes="(max-width: 640px) 100vw, (max-width: 900px) 33vw, 360px"
-                                        className={styles.galleryImg}
-                                    />
-                                </div>
-                            ))}
-                        </div>
+                        <ProjectGalleryLightbox
+                            images={project.galleryImages.slice(0, 3)}
+                            projectTitle={project.title}
+                        />
                     </section>
                 </div>
             </main>

@@ -13,6 +13,11 @@ const navLinks = [
     { href: "/about", label: "About Us" },
 ];
 
+const mobileNavLinks = [
+    ...navLinks,
+    { href: "/contact", label: "Contact" },
+];
+
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -72,29 +77,62 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}>
-                <ul className={styles.mobileLinks}>
-                    {navLinks.map((link) => (
-                        <li key={link.href}>
-                            <Link
-                                href={link.href}
-                                className={styles.mobileLink}
-                                onClick={() => setMenuOpen(false)}
-                            >
-                                {link.label}
-                            </Link>
-                        </li>
-                    ))}
-                    <li>
+                <div className={styles.mobilePanel}>
+                    <div className={styles.mobileTop}>
                         <Link
-                            href="/contact"
-                            className="btn-primary"
-                            style={{ width: "100%", justifyContent: "center" }}
+                            href="/"
+                            className={styles.mobileLogo}
                             onClick={() => setMenuOpen(false)}
+                            aria-label="Go to homepage"
                         >
-                            Let&apos;s Talk
+                            <Image
+                                src="/LOGO_WHITE.png"
+                                alt="Code4MatesDev logo"
+                                width={220}
+                                height={40}
+                                priority
+                                className={styles.mobileLogoImg}
+                            />
                         </Link>
-                    </li>
-                </ul>
+
+                        <button
+                            className={styles.mobileCloseBtn}
+                            onClick={() => setMenuOpen(false)}
+                            aria-label="Close menu"
+                            type="button"
+                        >
+                            <X size={20} />
+                        </button>
+                    </div>
+
+                    <ul className={styles.mobileLinks}>
+                        {mobileNavLinks.map((link) => (
+                            <li key={link.href}>
+                                <Link
+                                    href={link.href}
+                                    className={styles.mobileLink}
+                                    onClick={() => setMenuOpen(false)}
+                                >
+                                    {link.label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <div className={styles.mobileFooter}>
+                        <div className={styles.mobileFooterText}>
+                            SERVICES AVAILABLE REMOTELY WORLDWIDE
+                        </div>
+                        <div className={styles.mobileFooterText}>
+                            <a href="mailto:info@code4matesdev.com">
+                                info@code4matesdev.com
+                            </a>
+                        </div>
+                        <div className={styles.mobileFooterText}>
+                            +94 71 484 5708
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
     );

@@ -1,5 +1,5 @@
 .backRow {
-    padding: 100px 0 0;
+    padding: calc(var(--space-80) + var(--space-16)) 0 0;
 }
 
 .backLink {
@@ -20,7 +20,7 @@
 .heroImage {
     position: relative;
     width: 100%;
-    margin-top: 24px;
+    margin-top: var(--space-24);
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.07));
@@ -33,13 +33,13 @@
 }
 
 .content {
-    padding: 40px 0 0;
+    padding: calc(var(--space-32) + var(--space-8)) 0 0;
     max-width: 800px;
 }
 
 .category {
     display: inline-block;
-    margin-top: 8px;
+    margin-top: var(--space-8);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -48,7 +48,7 @@
 }
 
 .title {
-    margin-top: 12px;
+    margin-top: var(--space-16);
     font-size: clamp(28px, 4vw, 42px);
     font-weight: 900;
     letter-spacing: -0.03em;
@@ -58,7 +58,7 @@
 
 /* Full width of the page container (same band as hero / gallery) */
 .descriptionFull {
-    margin: 24px 0 0;
+    margin: var(--space-24) 0 0;
     width: 100%;
     max-width: none;
     font-size: clamp(16px, 1.15vw, 18px);
@@ -69,8 +69,8 @@
 }
 
 .sectionLabel {
-    margin-top: 40px;
-    margin-bottom: 14px;
+    margin-top: var(--space-48);
+    margin-bottom: var(--space-16);
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 0.12em;
@@ -81,7 +81,7 @@
 .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: var(--space-8);
 }
 
 .tag {
@@ -97,8 +97,8 @@
 /* Full-width band so 3 thumbnails aren’t stuck in the narrow text column */
 .gallerySection {
     width: 100%;
-    padding: 32px 0 80px;
-    margin-top: 8px;
+    padding: var(--space-32) 0 var(--space-80);
+    margin-top: var(--space-8);
 }
 
 .galleryHeading {
@@ -139,9 +139,9 @@
     object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 639px) {
     .backRow {
-        padding: 88px 0 0;
+        padding: var(--space-80) 0 0;
     }
 
     .gallery {

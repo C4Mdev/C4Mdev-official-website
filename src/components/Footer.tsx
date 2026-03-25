@@ -130,15 +130,7 @@ export default function Footer() {
                         </li>
                         <li>
                             <Phone size={14} />
-                            <span>+94 77 999 2467</span>
-                        </li>
-                        <li>
-                            <Phone size={14} />
                             <span>+94 71 484 5708</span>
-                        </li>
-                        <li>
-                            <Phone size={14} />
-                            <span>+94 77 404 8410</span>
                         </li>
                     </ul>
                 </div>
