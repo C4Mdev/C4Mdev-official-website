@@ -1,4 +1,5 @@
 .cta {
+    padding-top: calc(var(--space-48) - 50px);
     padding-bottom: 0;
 }
 

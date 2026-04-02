@@ -8,3 +8,66 @@
     mix-blend-mode: screen;
 }
 
+.controls {
+    position: fixed;
+    right: 18px;
+    top: 50%;
+    z-index: 2501;
+    padding: 4px;
+    border-radius: 12px;
+    background: rgba(10, 10, 20, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    pointer-events: auto;
+    transform: translateY(-50%) rotate(90deg) scale(0.72);
+    transform-origin: center right;
+    transition: transform 0.22s ease, padding 0.22s ease, gap 0.22s ease;
+}
+
+.controls:hover {
+    padding: 8px;
+    gap: 8px;
+    transform: translateY(-50%) rotate(90deg) scale(1);
+}
+
+.swatches {
+    display: flex;
+    gap: 4px;
+    transition: gap 0.22s ease;
+}
+
+.swatch {
+    width: 13px;
+    height: 13px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: width 0.22s ease, height 0.22s ease;
+}
+
+.controls:hover .swatches {
+    gap: 6px;
+}
+
+.controls:hover .swatch {
+    width: 18px;
+    height: 18px;
+}
+
+.swatchActive {
+    outline: 2px solid #fff;
+    outline-offset: 1px;
+    box-shadow:
+        0 0 8px var(--swatch-color, rgba(108, 99, 255, 0.9)),
+        0 0 18px color-mix(in srgb, var(--swatch-color, #6c63ff) 60%, transparent);
+}
+
+@media (max-width: 640px) {
+    .controls {
+        right: 16px;
+    }
+}
+

@@ -13,20 +13,14 @@ const contactInfo = [
     },
     {
         icon: Phone,
-        label: "Call Us",
-        value: "+94 77 999 2467",
-        href: "tel:+94779992467",
-    },
-    {
-        icon: Phone,
-        label: "Alternative",
-        value: "+94 77 404 8410",
-        href: "tel:+94774048410",
+        label: "WhatsApp",
+        value: "+94 71 484 5708",
+        href: "https://wa.me/94714845708",
     },
     {
         icon: MapPin,
         label: "Location",
-        value: "Remote — Available Worldwide",
+        value: "Remote - Available Worldwide",
         href: null,
     },
 ];
@@ -130,7 +124,13 @@ export default function ContactForm() {
                                         <div>
                                             <div className={styles.contactLabel}>{item.label}</div>
                                             {item.href ? (
-                                                <a href={item.href} className={styles.contactValue}>
+                                                <a
+                                                    href={item.href}
+                                                    className={styles.contactValue}
+                                                    {...(item.href.startsWith("http")
+                                                        ? { target: "_blank", rel: "noopener noreferrer" }
+                                                        : {})}
+                                                >
                                                     {item.value}
                                                 </a>
                                             ) : (

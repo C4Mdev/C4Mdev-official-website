@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./MouseSmoke.module.css";
 
 type SmokeParticle = {
@@ -14,11 +14,60 @@ type SmokeParticle = {
     alpha: number;
 };
 
+const DEFAULT_SMOKE_COLOR = "#6c63ff";
+const STORAGE_KEY = "c4m-smoke-color";
+const PRESET_COLORS = [
+    "#6c63ff",
+    "#a855f7",
+    "#06b6d4",
+    "#10b981",
+    "#f59e0b",
+    "#ef4444",
+];
+
+function hexToRgb(hex: string): { r: number; g: number; b: number } {
+    const normalized = hex.replace("#", "");
+    const expanded =
+        normalized.length === 3
+            ? normalized
+                  .split("")
+                  .map((ch) => ch + ch)
+                  .join("")
+            : normalized;
+
+    const value = Number.parseInt(expanded, 16);
+    return {
+        r: (value >> 16) & 255,
+        g: (value >> 8) & 255,
+        b: value & 255,
+    };
+}
+
 export default function MouseSmoke() {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const particlesRef = useRef<SmokeParticle[]>([]);
     const rafRef = useRef<number | null>(null);
     const lastSpawnRef = useRef<{ x: number; y: number } | null>(null);
+    const [smokeColor, setSmokeColor] = useState(DEFAULT_SMOKE_COLOR);
+
+    useEffect(() => {
+        try {
+            const saved = window.localStorage.getItem(STORAGE_KEY);
+            if (saved) setSmokeColor(saved);
+        } catch {
+            // Ignore local storage errors.
+        }
+    }, []);
+
+    useEffect(() => {
+        try {
+            window.localStorage.setItem(STORAGE_KEY, smokeColor);
+        } catch {
+            // Ignore local storage errors.
+        }
+    }, [smokeColor]);
+
+    const smokeRgb = useMemo(() => hexToRgb(smokeColor), [smokeColor]);
 
     useEffect(() => {
         const reduceMotion = window.matchMedia?.(
@@ -128,9 +177,15 @@ export default function MouseSmoke() {
                 const radius = p.r * (0.65 + k * 0.9);
 
                 const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, radius);
-                grad.addColorStop(0, `rgba(108, 99, 255, ${alpha})`);
-                grad.addColorStop(0.55, `rgba(168, 85, 247, ${alpha * 0.55})`);
-                grad.addColorStop(1, `rgba(6, 182, 212, 0)`);
+                grad.addColorStop(
+                    0,
+                    `rgba(${smokeRgb.r}, ${smokeRgb.g}, ${smokeRgb.b}, ${alpha})`
+                );
+                grad.addColorStop(
+                    0.55,
+                    `rgba(${smokeRgb.r}, ${smokeRgb.g}, ${smokeRgb.b}, ${alpha * 0.55})`
+                );
+                grad.addColorStop(1, `rgba(${smokeRgb.r}, ${smokeRgb.g}, ${smokeRgb.b}, 0)`);
 
                 ctx.globalCompositeOperation = "lighter";
                 ctx.fillStyle = grad;
@@ -151,8 +206,36 @@ export default function MouseSmoke() {
             window.removeEventListener("pointerleave", onPointerLeave);
             if (rafRef.current) cancelAnimationFrame(rafRef.current);
         };
-    }, []);
+    }, [smokeRgb]);
 
-    return <canvas ref={canvasRef} className={styles.canvas} />;
+    return (
+        <>
+            <canvas ref={canvasRef} className={styles.canvas} />
+
+            <div className={styles.controls} aria-label="Smoke color controls">
+                <div className={styles.swatches}>
+                    {PRESET_COLORS.map((color) => (
+                        <button
+                            key={color}
+                            type="button"
+                            className={`${styles.swatch} ${
+                                smokeColor.toLowerCase() === color.toLowerCase()
+                                    ? styles.swatchActive
+                                    : ""
+                            }`}
+                            style={
+                                {
+                                    backgroundColor: color,
+                                    "--swatch-color": color,
+                                } as React.CSSProperties
+                            }
+                            aria-label={`Set smoke color ${color}`}
+                            onClick={() => setSmokeColor(color)}
+                        />
+                    ))}
+                </div>
+            </div>
+        </>
+    );
 }
 

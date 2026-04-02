@@ -83,18 +83,18 @@ export default function AboutSection() {
                                 );
                             })}
                         </div>
+
+                        <div className={styles.banner}>
+                            <p className={styles.bannerText}>
+                                We partner with businesses to deliver innovative, scalable, and
+                                secure digital solutions — empowering you to achieve your goals in
+                                a rapidly evolving digital landscape.
+                            </p>
+                            <div className={styles.bannerAccent} />
+                        </div>
                     </div>
                 </div>
 
-                {/* Bottom Banner */}
-                <div className={styles.banner}>
-                    <p className={styles.bannerText}>
-                        We partner with businesses to deliver innovative, scalable, and secure
-                        digital solutions — empowering you to achieve your goals in a rapidly
-                        evolving digital landscape.
-                    </p>
-                    <div className={styles.bannerAccent} />
-                </div>
             </div>
         </section>
     );

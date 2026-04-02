@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import styles from "./WorksSection.module.css";
 
 type Project = {
     id: string;
+    slug: string;
     title: string;
     category: string;
     description: string;
@@ -21,6 +22,7 @@ type Project = {
 const projects: Project[] = [
     {
         id: "proj-1",
+        slug: "united-accountancy",
         title: "United Accountancy",
         category: "Accounting & Tax Software",
         description:
@@ -32,6 +34,7 @@ const projects: Project[] = [
     },
     {
         id: "proj-2",
+        slug: "peo-lands",
         title: "PEO Lands",
         category: "Classified Listings Platform",
         description:
@@ -50,6 +53,7 @@ const projects: Project[] = [
     },
     {
         id: "proj-3",
+        slug: "minneriya",
         title: "Minneriya Wild Tours",
         category: "Tourism Website",
         description: "Telemedicine platform connecting patients with doctors, featuring video consultations and electronic health records.",
@@ -92,10 +96,12 @@ export default function WorksSection() {
                 {/* Projects Grid */}
                 <div className={styles.grid}>
                     {projects.map((project, index) => (
-                        <div
+                        <Link
                             key={project.id}
                             className={`${styles.card} ${index === 0 ? styles.featured : ""}`}
                             id={project.id}
+                            href={`/works/${project.slug}`}
+                            aria-label={`View ${project.title} project`}
                         >
                             {/* Visual */}
                             <div
@@ -125,9 +131,9 @@ export default function WorksSection() {
                                 <div className={styles.visualContent}>
                                     <span className={styles.visualLabel}>{project.category}</span>
                                 </div>
-                                <button className={styles.externalBtn} aria-label="View project">
+                                <span className={styles.externalBtn} aria-hidden="true">
                                     <ExternalLink size={16} />
-                                </button>
+                                </span>
                             </div>
 
                             {/* Info */}
@@ -150,19 +156,8 @@ export default function WorksSection() {
                                     ))}
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
-                </div>
-
-                <div className={styles.viewAllWrap}>
-                    <Link
-                        href="/works"
-                        className="btn-secondary"
-                        id="works-view-all"
-                    >
-                        View All Projects
-                        <ArrowRight size={16} />
-                    </Link>
                 </div>
             </div>
         </section>
