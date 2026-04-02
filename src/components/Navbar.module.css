@@ -125,19 +125,21 @@
     /* Make the overlay solid (no page-through) on mobile */
     background: #050510;
     background-color: #050510;
-    opacity: 0;
+    opacity: 1;
+    visibility: hidden;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     z-index: 1001; /* ensure it renders above the fixed header background */
     padding: var(--space-80) var(--space-24) var(--space-24);
-    transform: translateX(100%);
+    transform: translate3d(100%, 0, 0);
     pointer-events: none;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s linear 0.4s;
+    will-change: transform;
 }
 
 .mobileMenuOpen {
-    transform: translateX(0);
-    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
     pointer-events: auto;
 }
 
@@ -275,5 +277,19 @@
         text-align: center;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    /* Force fixed header to be fully opaque on iOS (prevents drawer "washed out" transparency). */
+    .header {
+        background: rgba(5, 5, 16, 1) !important;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .header.scrolled {
+        background: rgba(5, 5, 16, 1) !important;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        box-shadow: none;
     }
 }
