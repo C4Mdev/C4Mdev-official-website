@@ -10,7 +10,6 @@ type Project = {
     slug: string;
     title: string;
     category: string;
-    description: string;
     tags: string[];
     image?: string;
     /** background-position when using image (e.g. top center for tall screenshots) */
@@ -25,8 +24,6 @@ const projects: Project[] = [
         slug: "united-accountancy",
         title: "United Accountancy",
         category: "Accounting & Tax Software",
-        description:
-            "A fully customized client management and tax accountancy system—centralized dashboard, client records, tax workflows, reporting, document storage, and secure role-based access, built with React, Node.js, and Supabase.",
         tags: ["React", "Node.js", "Supabase"],
         image: "/united-accountancy/mian.png",
         imageBackgroundPosition: "top center",
@@ -37,8 +34,6 @@ const projects: Project[] = [
         slug: "peo-lands",
         title: "PEO Lands",
         category: "Classified Listings Platform",
-        description:
-            "A modern, cloud-based classified listings platform for Sri Lanka—properties, vehicles, electronics, pets, and more—with powerful search, watermarked images, roles, SEO, and an admin dashboard.",
         tags: [
             "Next.js",
             "TypeScript",
@@ -56,7 +51,6 @@ const projects: Project[] = [
         slug: "minneriya",
         title: "Minneriya Wild Tours",
         category: "Tourism Website",
-        description: "Telemedicine platform connecting patients with doctors, featuring video consultations and electronic health records.",
         tags: ["React", "Onepay", "Supabase"],
         image: "/minneriya-wild-tours/main.png",
         imageBackgroundPosition: "top center",
@@ -66,7 +60,6 @@ const projects: Project[] = [
         id: "proj-4",
         title: "EduFlow LMS",
         category: "EdTech Platform",
-        description: "Modern learning management system with interactive courses, progress tracking, and live collaboration tools.",
         tags: ["Vue.js", "Django", "WebSocket"],
         gradient: "linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)",
         accent: "#f59e0b",
@@ -87,7 +80,7 @@ export default function WorksSection() {
                             <span className="gradient-text">Define Excellence</span>
                         </h2>
                         <p className="section-subtitle">
-                            A showcase of our finest work — digital solutions that have transformed
+                            A showcase of our finest work - digital solutions that have transformed
                             businesses and delighted users worldwide.
                         </p>
                     </div>
@@ -147,7 +140,6 @@ export default function WorksSection() {
                                     </span>
                                 </div>
                                 <h3 className={styles.title}>{project.title}</h3>
-                                <p className={styles.desc}>{project.description}</p>
                                 <div className={styles.tags}>
                                     {project.tags.map((tag) => (
                                         <span key={tag} className={styles.tag}>

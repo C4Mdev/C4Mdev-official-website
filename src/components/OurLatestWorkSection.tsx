@@ -48,9 +48,13 @@ export default function OurLatestWorkSection() {
                                     <h3 className={styles.cardTitle}>
                                         {project.title}
                                     </h3>
-                                    <p className={styles.cardDesc}>
-                                        {project.description}
-                                    </p>
+                                    <div className={styles.cardTags} aria-label="Technologies">
+                                        {project.tags.slice(0, 4).map((tag) => (
+                                            <span key={tag} className={styles.cardTagPill}>
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
 
                                     <span className={styles.cardBtn}>
                                         <span>Learn more</span>

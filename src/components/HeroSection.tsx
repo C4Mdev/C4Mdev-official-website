@@ -31,18 +31,17 @@ export default function HeroSection() {
 
                 {/* Heading */}
                 <h1 className={styles.heading}>
-                    Redefining{" "}
-                    <span className={styles.gradientWord}>Digital</span>
-                    <br />
-                    <span className={styles.gradientWord}>Excellence</span> for Your
-                    <br />
-                    Visionary Business
+                    We build{" "}
+                    <span className={styles.gradientWord}>
+                        ERP, POS &amp; eCommerce systems
+                    </span>{" "}
+                    that replace off-the-shelf software - at a fraction of Western agency cost
                 </h1>
 
                 {/* Subtext */}
                 <p className={styles.subtext}>
-                    At Code4MatesDev, we craft groundbreaking digital solutions that empower
-                    businesses to lead, innovate, and succeed in an ever-changing world.
+                    A 3-engineer team from Sri Lanka, serving SMEs and startups globally. Fast,
+                    senior-level, remote-ready.
                 </p>
 
                 {/* CTAs */}

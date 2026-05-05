@@ -1,62 +1,56 @@
 "use client";
 
-import { Quote, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import styles from "./TestimonialsSection.module.css";
 
 const testimonials = [
     {
         id: "t1",
-        name: "Sarah Johnson",
-        role: "CEO, TechVentures Inc.",
-        avatar: "SJ",
-        color: "#6c63ff",
+        name: "Dhanushka S.",
+        job: "Managing Partner",
+        initials: "DS",
         rating: 5,
-        text: "Code4MatesDev transformed our entire digital infrastructure. Their team delivered a world-class SaaS platform that exceeded every expectation. Truly exceptional work.",
+        text: "They replaced our manual ledgers and scattered Excel files with one system. Client records, tax workflows, and reporting finally live in one place. The team was senior, fast, and remote-friendly.",
     },
     {
         id: "t2",
-        name: "Michael Chen",
-        role: "CTO, FinanceFlow",
-        avatar: "MC",
-        color: "#06b6d4",
+        name: "Rishantha D.",
+        job: "Operations Lead",
+        initials: "RD",
         rating: 5,
-        text: "The attention to detail and technical expertise shown by the Code4MatesDev team is unmatched. Our fintech platform handles millions of transactions flawlessly.",
+        text: "Search, listings, and admin are snappy. We ship more inventory with less back-and-forth. Clear communication across time zones — exactly what we needed from an offshore partner.",
     },
     {
         id: "t3",
-        name: "Priya Patel",
-        role: "Founder, HealthBridge",
-        avatar: "PP",
-        color: "#10b981",
+        name: "Nuwan G.",
+        job: "Founder",
+        initials: "NG",
         rating: 5,
-        text: "Working with Code4MatesDev was a game-changer. They understood our complex healthcare requirements and delivered a HIPAA-compliant solution on time and within budget.",
+        text: "From discovery to launch, they treated our product like their own. Bookings and payments feel smooth for guests. We got agency-quality work without the Western price tag.",
     },
     {
         id: "t4",
-        name: "James Wilson",
-        role: "Product Manager, EduTech Co.",
-        avatar: "JW",
-        color: "#f59e0b",
+        name: "Sarah M.",
+        job: "Head of Product",
+        initials: "SM",
         rating: 5,
-        text: "The UI/UX design work was absolutely stunning. Our user engagement increased by 300% after the redesign. Code4MatesDev truly understands user-centered design.",
+        text: "Three engineers, zero fluff. They integrated with our stack, documented decisions, and shipped on schedule. We have kept them on for phase two without hesitation.",
     },
     {
         id: "t5",
-        name: "Emma Rodriguez",
-        role: "Director, RetailMax",
-        avatar: "ER",
-        color: "#a855f7",
+        name: "James W.",
+        job: "IT Director",
+        initials: "JW",
         rating: 5,
-        text: "Our e-commerce platform now processes 10x more orders than before. The scalable architecture they built is rock-solid. Highly recommend Code4MatesDev!",
+        text: "We needed a POS and inventory view our staff could learn in a day. The UI is clear, support is responsive, and we are seeing fewer errors at checkout.",
     },
     {
         id: "t6",
-        name: "David Kim",
-        role: "VP Engineering, CloudSoft",
-        avatar: "DK",
-        color: "#ef4444",
+        name: "Priya K.",
+        job: "Startup CTO",
+        initials: "PK",
         rating: 5,
-        text: "From initial consultation to final deployment, the entire experience was seamless. Their agile process kept us informed every step of the way. Outstanding team.",
+        text: "Solid architecture, sensible defaults, and no surprise invoices. They ship like a product team, not a body shop. Our investors were happy with the velocity.",
     },
 ];
 
@@ -64,46 +58,51 @@ export default function TestimonialsSection() {
     return (
         <section className={`section ${styles.testimonials}`} id="testimonials">
             <div className="container">
-                {/* Header */}
+                {/* Same header pattern as Our Works (WorksSection) */}
                 <div className={styles.header}>
-                    <span className="badge">Client Stories</span>
-                    <h2 className="section-title">
-                        Trusted by Businesses
-                        <br />
-                        <span className="gradient-text">Around the World</span>
-                    </h2>
-                    <p className="section-subtitle">
-                        Don&apos;t just take our word for it — hear from the businesses we&apos;ve
-                        helped transform with our digital solutions.
-                    </p>
+                    <div>
+                        <span className="badge">Testimonials</span>
+                        <h2 className="section-title" style={{ marginTop: "16px" }}>
+                            What Our Clients
+                            <br />
+                            <span className="gradient-text">Say About Us</span>
+                        </h2>
+                        <p className="section-subtitle">
+                            Hear from teams who trusted us with custom ERP, POS, eCommerce, and web
+                            platforms - from Sri Lanka to remote partners worldwide. We focus on
+                            clear communication, senior-level delivery, and software you can run for
+                            years.
+                        </p>
+                    </div>
                 </div>
 
-                {/* Grid */}
                 <div className={styles.grid}>
                     {testimonials.map((t) => (
-                        <div key={t.id} className={styles.card} id={t.id}>
-                            <div className={styles.cardTop}>
-                                <Quote size={20} className={styles.quoteIcon} />
-                                <div className={styles.stars}>
-                                    {Array.from({ length: t.rating }).map((_, i) => (
-                                        <Star key={i} size={12} className={styles.star} />
-                                    ))}
-                                </div>
+                        <article key={t.id} className={styles.card}>
+                            <div
+                                className={styles.stars}
+                                aria-label={`${t.rating} out of 5 stars`}
+                            >
+                                {Array.from({ length: t.rating }).map((_, i) => (
+                                    <Star key={i} size={14} className={styles.star} aria-hidden />
+                                ))}
                             </div>
-                            <p className={styles.text}>&ldquo;{t.text}&rdquo;</p>
-                            <div className={styles.author}>
-                                <div
-                                    className={styles.avatar}
-                                    style={{ background: `${t.color}22`, color: t.color, borderColor: `${t.color}44` }}
-                                >
-                                    {t.avatar}
+                            <blockquote className={styles.text}>&ldquo;{t.text}&rdquo;</blockquote>
+                            <div className={styles.cardBottom}>
+                                <div className={styles.author}>
+                                    <div className={styles.avatar} aria-hidden>
+                                        {t.initials}
+                                    </div>
+                                    <div className={styles.authorText}>
+                                        <div className={styles.name}>{t.name}</div>
+                                        <div className={styles.job}>{t.job}</div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <div className={styles.name}>{t.name}</div>
-                                    <div className={styles.role}>{t.role}</div>
-                                </div>
+                                <span className={styles.quoteDecor} aria-hidden>
+                                    &rdquo;
+                                </span>
                             </div>
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>

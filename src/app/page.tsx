@@ -39,7 +39,7 @@ export default function Home() {
         <WorksSection />
        {/* <ProcessSection />*/}
 {/*<AboutSection />*/}
-        {/*<TestimonialsSection />*/}
+        <TestimonialsSection />
         <CTASection />
       </main>
       <Footer />

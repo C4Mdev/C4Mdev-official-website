@@ -186,16 +186,23 @@
     color: var(--text-primary, #ffffff);
 }
 
-.cardDesc {
-    font-size: 13px;
-    line-height: 1.6;
-    color: var(--text-secondary, rgba(255, 255, 255, 0.65));
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.cardTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
     flex: 1;
+    align-content: flex-start;
+}
+
+.cardTagPill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .cardBtn {

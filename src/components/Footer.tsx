@@ -37,7 +37,7 @@ const socials = [
     },
     {
         icon: Linkedin,
-        href: "https://www.linkedin.com/company/code4matesdev/",
+        href: "https://www.linkedin.com/company/code4matesdev/?viewAsMember=true",
         label: "LinkedIn",
         external: true,
     },

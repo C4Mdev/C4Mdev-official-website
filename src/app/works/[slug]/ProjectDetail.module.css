@@ -56,11 +56,52 @@
     color: var(--text-primary, #fff);
 }
 
-/* Full width of the page container (same band as hero / gallery) */
-.descriptionFull {
+.liveSiteWrap {
+    margin: var(--space-24) 0 0;
+}
+
+.liveSiteLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent-primary, #6c63ff);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.liveSiteLink:hover {
+    color: #a855f7;
+    transform: translateX(2px);
+}
+
+/* Case study — three sections (Client & Problem, Solution, Result) */
+.caseStudy {
     margin: var(--space-24) 0 0;
     width: 100%;
     max-width: none;
+}
+
+.caseSection {
+    margin-top: var(--space-32);
+}
+
+.caseSection:first-child {
+    margin-top: 0;
+}
+
+.caseHeading {
+    margin: 0 0 var(--space-16);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.caseBody {
+    margin: 0;
     font-size: clamp(16px, 1.15vw, 18px);
     line-height: 1.8;
     color: var(--text-secondary, rgba(255, 255, 255, 0.65));
@@ -137,6 +178,7 @@
 
 .galleryImg {
     object-fit: cover;
+    object-position: top center;
 }
 
 @media (max-width: 639px) {
