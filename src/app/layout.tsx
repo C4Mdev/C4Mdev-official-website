@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import MouseSmoke from "@/components/MouseSmoke";
 import CustomCursor from "@/components/CustomCursor";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -77,6 +78,7 @@ export default function RootLayout({
         {children}
         <MouseSmoke />
         <CustomCursor />
+        <ScrollToTopButton />
         <Analytics />
         <SpeedInsights />
       </body>
