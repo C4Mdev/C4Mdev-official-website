@@ -36,9 +36,9 @@ export default function CTASection() {
                                 <ArrowRight size={16} />
                             </Link>
                             <div className={styles.contacts}>
-                                <a href="mailto:info@code4matesdev.com" className={styles.contactItem}>
+                                <a href="mailto:info@code4mates.com" className={styles.contactItem}>
                                     <Mail size={14} />
-                                    info@code4matesdev.com
+                                    info@code4mates.com
                                 </a>
                                 <a href="tel:+94714845708" className={styles.contactItem}>
                                     <Phone size={14} />

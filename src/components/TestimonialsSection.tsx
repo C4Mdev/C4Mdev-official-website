@@ -1,16 +1,17 @@
 "use client";
 
+import { useState } from "react";
 import { Star } from "lucide-react";
 import styles from "./TestimonialsSection.module.css";
 
 const testimonials = [
     {
         id: "t1",
-        name: "Dhanushka S.",
-        job: "Managing Partner",
-        initials: "DS",
+        name: "United Accountancy.",
+        job: "CEO",
+        initials: "UA",
         rating: 5,
-        text: "They replaced our manual ledgers and scattered Excel files with one system. Client records, tax workflows, and reporting finally live in one place. The team was senior, fast, and remote-friendly.",
+        text: "We recently partnered with Code4Mates to develop a custom client management system for our firm, and the experience was seamless from start to finish. The team took the time to understand our specific workflows and delivered a robust, intuitive solution that has significantly boosted our efficiency. Their technical expertise is matched only by their professionalism. If you're looking for a development crew that delivers high-quality code on time, I can’t recommend Code4Mates enough.",
     },
     {
         id: "t2",
@@ -55,6 +56,20 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
+    const [expandedIds, setExpandedIds] = useState<Set<string>>(new Set());
+
+    const handleToggleExpand = (id: string) => {
+        setExpandedIds((prev) => {
+            const next = new Set(prev);
+            if (next.has(id)) {
+                next.delete(id);
+            } else {
+                next.add(id);
+            }
+            return next;
+        });
+    };
+
     return (
         <section className={`section ${styles.testimonials}`} id="testimonials">
             <div className="container">
@@ -77,33 +92,48 @@ export default function TestimonialsSection() {
                 </div>
 
                 <div className={styles.grid}>
-                    {testimonials.map((t) => (
-                        <article key={t.id} className={styles.card}>
-                            <div
-                                className={styles.stars}
-                                aria-label={`${t.rating} out of 5 stars`}
-                            >
-                                {Array.from({ length: t.rating }).map((_, i) => (
-                                    <Star key={i} size={14} className={styles.star} aria-hidden />
-                                ))}
-                            </div>
-                            <blockquote className={styles.text}>&ldquo;{t.text}&rdquo;</blockquote>
-                            <div className={styles.cardBottom}>
-                                <div className={styles.author}>
-                                    <div className={styles.avatar} aria-hidden>
-                                        {t.initials}
-                                    </div>
-                                    <div className={styles.authorText}>
-                                        <div className={styles.name}>{t.name}</div>
-                                        <div className={styles.job}>{t.job}</div>
-                                    </div>
+                    {testimonials.map((t) => {
+                        const isExpanded = expandedIds.has(t.id);
+
+                        return (
+                            <article key={t.id} className={styles.card}>
+                                <div
+                                    className={styles.stars}
+                                    aria-label={`${t.rating} out of 5 stars`}
+                                >
+                                    {Array.from({ length: t.rating }).map((_, i) => (
+                                        <Star key={i} size={14} className={styles.star} aria-hidden />
+                                    ))}
                                 </div>
-                                <span className={styles.quoteDecor} aria-hidden>
-                                    &rdquo;
-                                </span>
-                            </div>
-                        </article>
-                    ))}
+                                <blockquote
+                                    className={`${styles.text} ${!isExpanded ? styles.textClamped : ""}`}
+                                >
+                                    &ldquo;{t.text}&rdquo;
+                                </blockquote>
+                                <button
+                                    type="button"
+                                    className={styles.seeMoreBtn}
+                                    onClick={() => handleToggleExpand(t.id)}
+                                >
+                                    {isExpanded ? "See less" : "See more"}
+                                </button>
+                                <div className={styles.cardBottom}>
+                                    <div className={styles.author}>
+                                        <div className={styles.avatar} aria-hidden>
+                                            {t.initials}
+                                        </div>
+                                        <div className={styles.authorText}>
+                                            <div className={styles.name}>{t.name}</div>
+                                            <div className={styles.job}>{t.job}</div>
+                                        </div>
+                                    </div>
+                                    <span className={styles.quoteDecor} aria-hidden>
+                                        &rdquo;
+                                    </span>
+                                </div>
+                            </article>
+                        );
+                    })}
                 </div>
             </div>
         </section>

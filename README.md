@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Contact form (Web3Forms)
 
-1. Create a form at [web3forms.com](https://web3forms.com) and set the **notification email** in the dashboard (e.g. `info@code4matesdev.com`).
+1. Create a form at [web3forms.com](https://web3forms.com) and set the **notification email** in the dashboard (e.g. `info@code4mates.com`).
 2. Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` to your access key.
 3. Restart `npm run dev` after changing env vars.
 

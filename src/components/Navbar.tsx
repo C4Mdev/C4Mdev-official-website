@@ -124,8 +124,8 @@ export default function Navbar() {
                             SERVICES AVAILABLE REMOTELY WORLDWIDE
                         </div>
                         <div className={styles.mobileFooterText}>
-                            <a href="mailto:info@code4matesdev.com">
-                                info@code4matesdev.com
+                            <a href="mailto:info@code4mates.com">
+                                info@code4mates.com
                             </a>
                         </div>
                         <div className={styles.mobileFooterText}>

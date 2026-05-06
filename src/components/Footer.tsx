@@ -126,7 +126,7 @@ export default function Footer() {
                         </li>
                         <li>
                             <Mail size={14} />
-                            <a href="mailto:info@code4matesdev.com">info@code4matesdev.com</a>
+                            <a href="mailto:info@code4mates.com">info@code4mates.com</a>
                         </li>
                         <li>
                             <Phone size={14} />
