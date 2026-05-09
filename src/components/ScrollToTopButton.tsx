@@ -27,7 +27,7 @@ export default function ScrollToTopButton() {
     return (
         <div className={styles.stack}>
             <a
-                href="https://wa.me/94714845708"
+                href="https://wa.me/94701399168"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.button} ${styles.whatsapp}`}

@@ -129,7 +129,7 @@ export default function Navbar() {
                             </a>
                         </div>
                         <div className={styles.mobileFooterText}>
-                            +94 71 484 5708
+                            +94 70 139 9168
                         </div>
                     </div>
                 </div>

@@ -131,12 +131,12 @@ export default function Footer() {
                         <li>
                             <Phone size={14} />
                             <a
-                                href="https://wa.me/94714845708"
+                                href="https://wa.me/94701399168"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Open WhatsApp chat"
                             >
-                                +94 71 484 5708
+                                +94 70 139 9168
                             </a>
                         </li>
                     </ul>

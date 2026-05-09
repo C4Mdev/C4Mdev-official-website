@@ -14,8 +14,8 @@ const contactInfo = [
     {
         icon: Phone,
         label: "WhatsApp",
-        value: "+94 71 484 5708",
-        href: "https://wa.me/94714845708",
+        value: "+94 70 139 9168",
+        href: "https://wa.me/94701399168",
     },
     {
         icon: MapPin,

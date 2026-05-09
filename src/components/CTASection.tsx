@@ -40,9 +40,9 @@ export default function CTASection() {
                                     <Mail size={14} />
                                     info@code4mates.com
                                 </a>
-                                <a href="tel:+94714845708" className={styles.contactItem}>
+                                <a href="tel:+94701399168" className={styles.contactItem}>
                                     <Phone size={14} />
-                                    +94 71 484 5708
+                                    +94 70 139 9168
                                 </a>
                             </div>
                         </div>
